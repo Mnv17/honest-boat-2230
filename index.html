@@ -5,21 +5,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FOOT LOCKER</title>
+    <title>One Destination</title>
     <style>
 
         body {
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 margin:0px; padding: 0px;
         }
-.promotion{
-text-align: center;
-font-size:small ;
+        .promotion{
+        text-align: center;
+        font-size:small ;
 
-margin-top: 10px;
-margin-bottom: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
 
-}
+        }
         .navbar {
             width: 100%;
             background-color: black;
@@ -27,64 +27,113 @@ margin-bottom: 10px;
         }
 
         .navbar-t {
-          padding-top: 20px;
-          padding-right: 15px;
-             justify-content: right;
-            gap: 20px;
-            display: flex;
-            color: white;
-          font-size: large;
-            text-align: center;
-           height: 26px;
-       
-        }
+                padding-top: 20px;
+                padding-right: 15px;
+                justify-content: right;
+                gap: 30px;
+                display: flex;
+                color: white;
+                font-size: large;
+                text-align: center;
+                height: 26px;
+            }
+            .navbar-t>div:nth-child(1) a{
+                text-decoration: none;
+                color: white;
+            }
+            .navbar-t>div:nth-child(2) a{
+                text-decoration: none;
+                color: white;
+            }
+            .navbar-t>div:nth-child(3) a{
+                text-decoration: none;
+                color: white;
+            }
+            .navbar-t>div:nth-child(1) a:hover{
+                text-decoration: underline;
+            }
+            .navbar-t>div:nth-child(2) a:hover{
+                text-decoration: underline;
+            }
+            .navbar-t>div:nth-child(3) a:hover{
+                text-decoration: underline;
+            }
+            
 
         .navbar-b {
-            padding-left: 10px;
+            padding-left: 8px;
             font-size: medium;
             display: flex;
             color: white;
-            height:80px;
+            height:120px;
         }
 
         .left>img {
             padding-left: 14px;
             padding-top: 10px;
-            height: 45px;
-            width: 200px;
+            height: 100px;
+            width: 100px;
         }
 
         .left {
       
-            width: 15%;
+            width: 10%;
         }
 
         .middle {
-            padding-left: 10px;
+            /* padding-left: 10px; */
             padding-top: 20px;
-            width: 60%;
+            width: 65%;
             gap: 25px;
             display: flex;
+            margin-top: 20px;
+        }
+        #middle>div a{
+            text-decoration: none;
+            color: white;
         }
 
         .right>div>img {
-            height: 25px;
-            width: 25px;
+            height: 20px;
+            width: 20px;
+            /* justify-content: right; */
         }
 
         .right {
-            margin-top: 20px;
-            gap: 25px;
+            margin-top: 35px;
+            gap: 40px;
             display: flex;
             color: white;
             padding-bottom: 20px;
-            justify-content: right;
+            width: 25%;
+            /* justify-content: right; */
+            
         }
-.right>div>input{
-    border: none;
-    height: 30px;
-    text-align: center;
-}
+        .right>div>input{
+            border: none;
+            height: 40px;
+            text-align: center;
+            margin-right: -1.5rem;
+        }
+        .search__button {
+        border: none;
+        background-color: white;
+        align-items: center;
+        margin-top: 5px;
+        height: 45%;
+        padding: 4px 0px;
+        }
+
+        .search__button:hover {
+        cursor: pointer;
+        }
+
+        .search__icon {
+        height: 1.5em;
+        width: 1.3em;
+        fill: #0a0a0a;
+
+        }
         .top1 {
             width: 100%;
             height: 85px;
@@ -110,6 +159,9 @@ margin-bottom: 10px;
             height: 20px;
             width: 20px;
         }
+        .top1 > div > a{
+            color: black;
+        }
 
         .top2>img {
             margin-top: 55px;
@@ -130,7 +182,10 @@ margin-bottom: 10px;
             width:16%;
            font-size: x-large;
             text-align: center;
-            /* margin: 10px 10px 10px 10px; */ */
+            /* margin: 10px 10px 10px 10px; */
+        }
+        .top3-a>div>a{
+            color: black;
         }
 .top3-a>div{
     padding-top: 25px;
@@ -190,10 +245,14 @@ margin-bottom: 10px;
     margin-top: 70px;
     text-align: center;
   }
-  .top6>img{
-    margin-top: 70px;
-    width: 100%;
+  .top6{
+    width: 40%;
+    display: flex;
   }
+  /* .top6>img{
+    margin-top: 70px;
+    width: 00%;
+  } */
   
   .top7 {
            width:98%;
@@ -229,6 +288,125 @@ font-size: x-large;
         .bottom{
             display: flex;
         }
+        body{
+    height:100vh
+    }
+    
+
+    
+    
+    .popup{
+        position:absolute;
+        top:-150%;
+         left:50%;
+        opacity:0;
+       transform: translate(-50%,-50%) scale(1.25);
+        width: 380px;
+        padding:20px 30px;
+        background: #fff;
+        box-shadow: 2px 2px 5px 5px rgba(0,0,0,0.15);
+        border-radius:10px;
+         transition:    top 0ms ease-in-out 200ms ,
+                      opacity 200ms ease-in-out 0ms,
+                      transform 200ms ease-in-out 0ms;  
+    }
+    
+     .popup.active{
+        top:50%;
+        opacity:1;
+        transform: translate(-50%,-50%) scale(1);
+        width: 380px;
+        transition:top 0ms ease-in-out 0ms ,
+                      opacity 200ms ease-in-out 0ms,
+                      transform 200ms ease-in-out 0ms;
+    } 
+    
+    
+    .popup .close-btn {
+        position:absolute;
+        top:10px;
+        right:10px;
+        width:15px;
+        height:15px;
+        background: #888;
+            color:#eee;
+            text-align: center;
+            line-height: 15px;
+            border-radius: 15px;
+            cursor:pointer;
+    }
+    
+    .popup .form h2 {
+        text-align: center;
+        color:#222;
+        margin:10px 0px 20px ;
+        font-size:25px;
+    
+    }  
+    .popup .form .form-element {
+        margin:15px 0px ;
+    }
+    .popup .form .form .form-element label {
+        font-size:14px;
+        color:#222;
+    
+    }
+    
+    
+    .popup .form .form-element input[type="text"],
+    .popup .form .form-element input[type="password"]{
+    
+    
+        margin-top:5px;
+        display:block;
+        width:100%;
+        padding:10px;
+        outline:none;
+        border:1px solid #aaa ;
+        border-radius :5px;
+    }
+    
+    .popup .form .form-element input[type="checkbox"]{
+        margin-right:5px;
+    
+    } 
+    
+     .popup .form .form-element button {
+        width:100%;
+        height:40px;
+        border:none;
+        outline:none;
+        font-size:16px;
+        background: #222;
+        color: #f5f5f5;
+        border-radius:10px;
+        cursor:pointer;
+    }
+    
+    .popup .form .form-element a{
+        display:block;
+        text-align:right;
+        font-size:15px;
+        color: #1a79ca;
+        text-decoration: none;
+        font-weight: 600;
+    
+    } 
+    
+
+    #show-login{
+         background-color: black;
+         color:white;
+         font-weight:700;
+         font-size: medium;
+    }
+    #customer a{
+        text-decoration: none;
+        color: white;
+    }
+    #customer a:hover{
+        text-decoration: underline;
+    }
     </style>
 </head>
 
@@ -238,32 +416,106 @@ font-size: x-large;
   
     <div class="navbar">
         <div class="navbar-t">
-            <div> find a store</div>
-            <div>Welcome, Sign In</div>
-            <div>Customer Service</div>
+            <div> 
+               <a href="">find a store</a> 
+            </div>
+
+            <div class = "center" >
+                <a href="" id = "show-login">Welcome,Sign In</a>
+        </div>
+        
+         
+        <div class = "popup">
+           <div class = "close-btn">&times;</div>
+        <div class="form">
+            <h2>Log In </h2>
+            <div class="form-element">
+                <label for="email">Email</label>
+                <input type="text" id = "email" placeholder="Enter email">
+            </div>
+            <div class="form-element">
+                <label for="password">Password</label>
+                <input type="password" id = "password" placeholder="Enter password">
+            </div>
+        
+            <div class="form-element">
+                <!-- <input type="checkbox" id = "remember-me" "> -->
+                <!-- <label for="remember-me">Remember me</label> -->
+            </div>
+        
+            <div class = "form-element">
+                   <button> Sign in</button>
+            </div>
+            <div class="form-element">
+                <a href="#">Forgot password?</a>
+            </div>
+            <div class="form-element">
+                <a href="createaccount.html">Create Account</a>
+            </div>
+        </div>
+        </div>
+            <div id="customer">
+               <a href="">Customer Service</a> 
+            </div>
         </div>
         <hr>
         <div class="navbar-b">
-            <div class="left"><img src="https://www.footlocker.com/built/252/images/FL/logo.svg" alt=""></div>
-            <div class="middle">
-                <div>NEW ARRIVALS</div>
-                <div>MEN'S</div>
-                <div>WOMEN'S</div>
-                <div>KIDS'</div>
-                <div>CLOTHING </div>
-                <div>FASHION SHOP</div>
-                <div>RELEASES</div>
-                <div>BRANDS</div>
-                <div>SALE</div>
+            <div class="left"><img src="./images/ezgif.com-gif-maker (2).gif" alt="error"></div>
+            <div class="middle" id="middle">
+                <div>
+                   <a href="">NEW ARRIVALS</a> 
+                </div>
+                <div>
+                   <a href="./men.html">MEN'S</a> 
+                </div>
+                <div>
+                   <a href="">WOMEN'S</a> 
+
+                </div>
+                <div>
+                  <a href="">KIDS'</a>  
+
+                </div>
+                <div>
+                  <a href="">CLOTHING </a>  
+
+                </div>
+                <div>
+                    <a href="">FASHION SHOP</a>
+
+                </div>
+                <div>
+                    <a href="">RELEASES</a>
+
+                </div>
+                <div>
+                    <a href="">BRANDS</a>
+
+                </div>
+                <div>
+                    <a href="">SALE</a>
+
+                </div>
             </div>
-            <div class="right">
-                <div><input type="text" placeholder="search"></div>
+            <div class="right" id="right">
+                <div id="search">
+                    <input type="search" id="search-bar" placeholder="search">
+                    <button class="search__button">
+                        <svg class="search__icon" aria-hidden="true" viewBox="0 0 24 24">
+                            <g>
+                                <path
+                                    d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z">
+                                </path>
+                            </g>
+                        </svg>
+                    </button>
+                </div>
                 <div><img
-                        src="https://cdn-user-icons.flaticon.com/90244/90244326/1673945001490.svg?token=exp=1673961785~hmac=812e7a03319939256ce439cfb8816dba"
-                        alt=""></div>
+                        src="./images/heart (1).png"
+                        alt="image"></div>
                 <div><img
-                        src="https://cdn-user-icons.flaticon.com/90244/90244326/1673961036201.svg?token=exp=1673961936~hmac=63b09383e893ecb01f0abfc1154a5854"
-                        alt=""></div>
+                        src="./images/shopping-cart.png"
+                        alt="image"></div>
             </div>
         </div>
     </div>
@@ -389,7 +641,13 @@ font-size: x-large;
     </div>
 
     <div class="top6">
-<img src="https://images.footlocker.com/content/dam/final/footlocker/site/homepage/2023/january/220109-fl-homepage-pro-standard-1up.jpg" alt="">
+        <div>
+            <h1>Three Stripe Style</h1>
+        </div>
+        <div>
+            <img src="https://images.footlocker.com/content/dam/final/footlocker/site/homepage/2023/january/220109-fl-homepage-pro-standard-1up.jpg" 
+            alt="">
+        </div>
     </div>
 
 
@@ -435,6 +693,81 @@ font-size: x-large;
         <div>Prices subject to change without notice. Products shown may not be available in our stores.</div>
         <div><img src="https://www.footlocker.com/built/252/images/shared/ic_sheerid.svg" alt=""></div>
     </div>
+    <div id="footer">
+
+    </div>
 </body>
+<script>
+
+document.addEventListener("click", (evt) => {
+        const flyoutEl = document.getElementById("search");
+        let targetEl = evt.target; // clicked element      
+        do {
+          if(targetEl == flyoutEl) {
+            // This is a click inside, does nothing, just return.
+            toggleSearchDivs();
+            return;
+          }
+          // Go up the DOM
+          targetEl = targetEl.parentNode;
+        } while (targetEl);
+        // This is a click outside.      
+        collapseSearchDivs();
+      });
+
+
+
+    
+    // search.addEventListener("click",()=>{
+    //     toggleSearchDivs();
+    // })
+
+    // search.addEventListener("blur", function() {
+    //     console.log("blur function");
+    //     collapseSearchDivs();
+    // });
+
+    function toggleSearchDivs(){
+        let search = document.getElementById("search");
+        let search_bar = document.getElementById("search-bar");
+        let right_div = document.getElementById("right");
+        let middle_div = document.getElementById("middle");
+
+            search.style.width="100%";
+            search_bar.style.width="100%";
+            right_div.style.width="100%";
+            middle_div.style.width="0%";
+
+        
+    }
+
+    function collapseSearchDivs(){
+
+        let search = document.getElementById("search");
+        let search_bar = document.getElementById("search-bar");
+        let right_div = document.getElementById("right");
+        let middle_div = document.getElementById("middle");
+
+            search.style.width="";
+            search_bar.style.width="";
+            right_div.style.width="";
+            middle_div.style.width="";
+       
+        
+    }
+    let login = document.getElementById("show-login");
+    login.addEventListener("click",(e)=>{
+        e.preventDefault()
+    })
+    document.querySelector("#show-login").addEventListener("click",function(){
+    document.querySelector(".popup").classList.add("active");
+      
+    })
+    
+    document.querySelector(".popup .close-btn").addEventListener("click",function(){
+    document.querySelector(".popup").classList.remove("active")
+    })
+
+</script>
 
 </html>

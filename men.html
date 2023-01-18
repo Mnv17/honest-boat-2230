@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title><link rel="stylesheet" href="men.css">
+</head>
+<body>
+  <h1>Men's Clothing</h1>
+  <div id="sortdiv" >
+  <div><h4>Refine-Results</h4></div>
+  <div><select id="sort1">
+    <option value="x">SortByName</option>
+    <option value="A-Z">A-Z</option>
+    <option value="Z-A">Z-A</option>
+   
+  </select></div>
+<div><select id="sort2"><option value="">SortByPrice</option>
+<option value="lowtohigh">Low to High</option>
+<option value="hightolow">High to Low</option></select></div></div>
+  <div style="display:flex;">
+  <div id="firstdiv"><h1>kjgg</h1>
+    <h3>Clothing style</h3>
+ <div><input id ="style1" class="input" type="checkbox" value="Hoodie"><span class="inputspan">Hoddies</span></div>
+ <div><input id ="style2" class="input" type="checkbox" value="Pants"><span class="inputspan">Pants</span></div>
+ <div><input id ="style3" class="input" type="checkbox" value="T-Shirts"><span class="inputspan">T-shirts</span></div>
+ <div><input id ="style4" class="input" type="checkbox" value="Joggers"><span class="inputspan">Joggers</span></div>
+ <div><input id ="style5" class="input" type="checkbox" value="Jackets"><span class="inputspan">Jackets</span></div>
+<h3>Color</h3>
+<div><input id="color1" class="input"  type="checkbox" value="Red"><span class="inputspan">Red</span></div>
+<div><input id="color2" class="input"  type="checkbox" value="Green"><span class="inputspan"> Green</span></div>
+<div><input id="color3" class="input" type="checkbox" value="Grey"><span class="inputspan">Grey</span></div>
+<div><input id="color4" class="input" type="checkbox" value="Black"><span class="inputspan">Black</span></div>
+<div><input id="color5" class="input" type="checkbox" value="Blue"><span class="inputspan">Blue</span></div>
+<h3>Size</h3>
+<div><input id="size1" class="input" type="checkbox" value="28"><span class="inputspan">28</span></div>
+<div><input id="size2" class="input" type="checkbox" value="30"><span class="inputspan">30</span></div>
+<div><input id="size3" class="input" type="checkbox" value="32"><span class="inputspan">32</span></div>
+<h3>Price</h3>
+<div><input id="price1" class="input" id="price1" type="checkbox" value="25-50"><span class="inputspan">25$-50$</span></div>
+<div><input id="price2" class="input" id="price2" type="checkbox" value="50-100"><span class="inputspan">50$-100$</span></div>
+<div><input id="price3" class="input" id="price3" type="checkbox" value=""><span class="inputspan">Above 100$</span></div>
+
+
+
+
+
+</div>
+  <div id="maindiv" ></div>
+</div>
+
+    <h1>hello</h1>
+</body>
+</html>
+<script>
+  let div=document.getElementById("maindiv")
+ let obj=[{id:1,
+  image:"https://images.footlocker.com/is/image/EBFL2/18347023?wid=249&hei=249&fmt=png-alpha",
+description:"Nick JDI Fleence Hoodie",
+price:29,
+category:"Men",
+style:"Hoodie",
+color:"Black",
+size:30
+ },
+{id:2,
+  image:"https://images.footlocker.com/is/image/EBFL2/V2645010?wid=249&hei=249&fmt=png-alpha",
+description:"Nick Club Full Zip Hoodie",
+price:39,
+category:"Men",
+style:"Hoodie",
+color:"Black",
+size:28
+},
+{id:3,
+  image:"https://images.footlocker.com/is/image/EBFL2/D3129063?wid=249&hei=249&fmt=png-alpha",
+description:"Nick NSW  PANTS",
+price:49,
+category:"Men",
+style:"Pants",
+color:"White",
+size:32
+},
+{id:4,
+  image:"https://images.footlocker.com/is/image/EBFL2/62388151?wid=249&hei=249&fmt=png-alpha",
+description:"NikE T-SHIRTS",
+price:79,
+category:"Men",
+style:"T-Shirts",
+color:"Red",
+size:28
+},
+{id:5,
+  image:"https://images.footlocker.com/is/image/EBFL2/122WP4BK?wid=249&hei=249&fmt=png-alpha",
+description:"MCR AMSTERDEM UTILITY PANTS",
+price:55,
+category:"Men",
+style:"Pants",
+color:"Black",
+size:32
+},
+{id:6,
+  image:"https://images.footlocker.com/is/image/EBFL2/42388069?wid=249&hei=249&fmt=png-alpha",
+description:"NIKE AIR T-SHIRTS",
+price:48,
+category:"Men",
+style:"T-Shirts",
+color:"Blue",
+size:32
+},
+{id:7,
+  image:"https://images.footlocker.com/is/image/EBFL2/18347029?wid=249&hei=249&fmt=png-alpha",
+description:"Nick JDI FLICE UDI",
+price:99,
+category:"Men",
+style:"Hoodie",
+color:"Grey",
+size:32
+},
+{id:8,
+  image:"https://images.footlocker.com/is/image/EBFL2/D3129010?wid=249&hei=249&fmt=png-alpha",
+description:"Nick NSW CARGO CLUB PANTS",
+price:43,
+category:"Men",
+style:"Pants",
+color:"Black",
+size:32
+},
+{id:9,
+  image:"https://images.footlocker.com/is/image/EBFL2/U4489010?wid=249&hei=249&fmt=png-alpha",
+description:"NIKE FULL ZIP HOODIE",
+price:39,
+category:"Men",
+style:"Hoodie",
+color:"Black",
+size:28
+},
+{id:10,
+  image:"https://images.footlocker.com/is/image/EBFL2/V2671010?wid=249&hei=249&fmt=png-alpha",
+description:"NiKE CLUB JOGGERS",
+price:59,
+category:"Men",
+style:"Joggers",
+color:"Black",
+size:30
+},
+{id:11,
+  image:"https://images.footlocker.com/is/image/EBFL2/U4495010?wid=249&hei=249&fmt=png-alpha",
+description:"Nick FLEECE JOGGERS",
+price:49,
+category:"Men",
+style:"Joggers",
+color:"Black",
+size:28
+},
+{id:12,
+  image:"https://images.footlocker.com/is/image/EBFL2/C4489259?wid=249&hei=249&fmt=png-alpha",
+description:"NiKE FLEECE FULL ZIP HOODIE",
+price:79,
+category:"Men",
+style:"Hoodie",
+color:"Brown",
+size:32
+},
+{id:13,
+  image:"https://images.footlocker.com/is/image/EBFL2/U4489063?wid=249&hei=249&fmt=png-alpha",
+description:"NiKE FLEECE FULL ZIP HOODIE",
+price:149,
+category:"Men",
+style:"Hoodie",
+color:"White",
+size:28
+},
+{id:14,
+  image:"https://images.footlocker.com/is/image/EBFL2/V2654663?wid=249&hei=249&fmt=png-alpha",
+description:"NiKE CLUB PULLOVER HODDIE",
+price:123,
+category:"Men",
+style:"Hoodie",
+color:"Pink",
+size:30
+},
+{id:15,
+  image:"https://images.footlocker.com/is/image/EBFL2/M6474407?wid=249&hei=249&fmt=png-alpha",
+description:"NIKE FLEECE FULL ZIP HOODIE",
+price:99,
+category:"Men",
+style:"Hoodie",
+color:"Blue",
+size:28
+},
+{id:16,
+  image:"https://images.footlocker.com/is/image/EBFL2/U4489072?wid=249&hei=249&fmt=png-alpha",
+description:"NIKE TECH FULL ZIP HODDIE",
+price:89,
+category:"Men",
+style:"Hoodie",
+color:"White",
+size:30
+},
+{id:17,
+  image:"https://images.footlocker.com/is/image/EBFL2/U4495063?wid=249&hei=249&fmt=png-alpha",
+description:"NIKE FLEECE JOGGERS",
+price:79,
+category:"Men",
+style:"Joggers",
+color:"white",
+size:32
+},
+{id:18,
+  image:"https://images.footlocker.com/is/image/EBFL2/V2671063?wid=249&hei=249&fmt=png-alpha",
+description:"Nick CLUB JOGGERS",
+price:69,
+category:"Men",
+style:"Joggers",
+color:"White",
+size:28
+},
+{id:19,
+  image:"https://images.footlocker.com/is/image/EBFL2/V2654259?wid=249&hei=249&fmt=png-alpha",
+description:"NIKE CLUB PULL OVER HOODIE",
+price:199,
+category:"Men",
+style:"Hoodie",
+color:"Brown",
+size:28
+},
+{id:20,
+  image:"https://images.footlocker.com/is/image/EBFL2/762FCRDW?wid=249&hei=249&fmt=png-alpha",
+description:"NBA STAIN JACKETS",
+price:449,
+category:"Men",
+style:"Jackets",
+color:"Red",
+size:28
+},
+{id:21,
+  image:"https://images.footlocker.com/is/image/EBFL2/V2654063?wid=249&hei=249&fmt=png-alpha",
+description:"Nick CLUB PULLOVER HODDIE",
+price:429,
+category:"Men",
+style:"Hoodie",
+color:"White",
+size:32
+},
+{id:22,
+  image:"https://images.footlocker.com/is/image/EBFL2/V2654341?wid=249&hei=249&fmt=png-alpha",
+description:"NICK CLUB PULLOVER HODDIE",
+price:149,
+category:"Men",
+style:"Hoddie",
+color:"Green",
+size:32
+},
+{id:23,
+  image:"https://images.footlocker.com/is/image/EBFL2/Q5152010?wid=249&hei=249&fmt=png-alpha",
+description:"Nick CLUB PULLOVER HODDIE",
+price:49,
+category:"Men",
+style:"Hoodie",
+color:"Black",
+size:28
+},
+{id:24,
+  image:"https://images.footlocker.com/is/image/EBFL2/J6977002?wid=249&hei=249&fmt=png-alpha",
+description:"NiKE AIR CRUE FLEECE",
+price:89,
+category:"Men",
+style:"Jackets",
+color:"Grey",
+size:28
+},
+{id:25,
+  image:"https://images.footlocker.com/is/image/EBFL2/U4489532?wid=249&hei=249&fmt=png-alpha",
+description:"NiKE FLEECE TECH HODDIE",
+price:179,
+category:"Men",
+style:"Hoodie",
+color:"Pink",
+size:30
+},
+{id:26,
+  image:"https://images.footlocker.com/is/image/EBFL2/V2645063?wid=249&hei=249&fmt=png-alpha",
+description:"NIKE CLUB HOODIE",
+price:99,
+category:"Men",
+style:"Hoodie",
+color:"White",
+size:28
+},
+{id:27,
+  image:"https://images.footlocker.com/is/image/EBFL2/V2645063?wid=249&hei=249&fmt=png-alpha",
+description:"NIKE CLUB HOODIE",
+price:99,
+category:"Men",
+style:"Hoodie",
+color:"White",
+size:30
+},
+{id:28,
+  image:"https://images.footlocker.com/is/image/EBFL2/U4489657?wid=249&hei=249&fmt=png-alpha",
+description:"NIKE TECH  CLUB HOODIE",
+price:89,
+category:"Men",
+style:"Hoodie",
+color:"Red",
+size:28
+},
+]
+// filteringpart
+// inputpartclothing
+let inputvalue=document.getElementsByClassName("input");
+for(let key of inputvalue){
+  key.addEventListener("input",(e)=>{
+let newdata=obj.filter((item,index)=>{
+ 
+ if(e.target.value==item.style && key.checked==true){
+    return true
+  }
+  else if(e.target.value==item.color &&key.checked==true){
+    return true
+  }
+  else if(e.target.value=="28" && item.size==28  &&key.checked==true){return true}
+  else if(e.target.value=="30" && item.size==30  &&key.checked==true){return true}
+  else if(e.target.value=="32" && item.size==32 &&key.checked==true){return true}
+else if(e.target.value=="25-50" && item.price>=25&&item.price<=50  &&key.checked==true){return true}
+else if(e.target.value=="50-100" && item.price>=50&&item.price<=100  &&key.checked==true){return true}
+else if(e.target.value=="" && item.price>100  &&key.checked==true){return true}
+else if(key.checked==false){return obj}
+})
+
+appenddata(newdata)
+})
+
+}
+// let inputvalue=document.getElementById("input")
+// let style2=document.getElementById("style2");
+// let style1=document.getElementById("style1");
+// style1.addEventListener("click",(e)=>{
+// let newdata=obj.filter((item,index)=>{
+//   if(item.style=="Hoodie" && style1.checked==true &&inpuvalue.value=="Hoodie"){
+// return true
+// }
+// else if(item.style=="Pants" && style2.checked==true){
+//   return true
+// }
+// else{return false}
+// })
+// appenddata(newdata)
+// })
+
+// style2.addEventListener("click",(e)=>{
+// let newdata=obj.filter((item,index)=>{
+//   if(item.style=="Pants"){
+// return true
+// }
+// else{return false}
+// })
+// appenddata(newdata)
+// })
+// style3
+// let style3=document.getElementById("style3");
+// style3.addEventListener("click",(e)=>{
+// let newdata=obj.filter((item,index)=>{
+//   if(item.style=="T-Shirts"){
+// return true
+// }
+// else{return false}
+// })
+// appenddata(newdata)
+// })
+// // style4
+// let style4=document.getElementById("style4");
+// style4.addEventListener("click",(e)=>{
+// let newdata=obj.filter((item,index)=>{
+//   if(item.style=="Joggers"){
+// return true
+// }
+// else{return false}
+// })
+// appenddata(newdata)
+// })
+// // style5 jackets
+// let style5=document.getElementById("style5");
+// style5.addEventListener("click",(e)=>{
+// let newdata=obj.filter((item,index)=>{
+//   if(item.style=="Jackets"){
+// return true
+// }
+// else{return false}
+// })
+// appenddata(newdata)
+// })  
+
+// // stylepartfinished
+
+// // colorpart
+// // redcolor1
+// let color1=document.getElementById("color1")
+// color1.addEventListener("click",(e)=>{
+// let newdata1=obj.filter((item,index)=>{
+//   if(item.color=="Red"){
+// return true
+// }
+// else{return false}
+// })
+// appenddata(newdata1)
+// })  
+// // color2 black
+// let color2=document.getElementById("color2")
+// color2.addEventListener("click",(e)=>{
+// let newdata=obj.filter((item,index)=>{
+//   if(item.color=="Green"){
+// return true
+// }
+// else{return false}
+// })
+// appenddata(newdata)
+// })  
+// // color3 grey
+// let color3=document.getElementById("color3")
+// color3.addEventListener("click",(e)=>{
+// let newdata=obj.filter((item,index)=>{
+//   if(item.color=="Grey"){
+// return true
+// }
+// else{return false}
+// })
+// appenddata(newdata)
+// })  
+// // color4 black
+// let color4=document.getElementById("color4")
+// color4.addEventListener("click",(e)=>{
+// let newdata=obj.filter((item,index)=>{
+//   if(item.color=="Black"){
+// return true
+// }
+// else{return false}
+// })
+// appenddata(newdata)
+// })  
+// // color5 blue
+// let color5=document.getElementById("color5")
+// color5.addEventListener("click",(e)=>{
+// let newdata=obj.filter((item,index)=>{
+//   if(item.color=="Blue"){
+// return true
+// }
+// else{return false}
+// })
+// appenddata(newdata)
+// }) 
+// // colorpartfinished
+
+// // sizepart28
+// let size1=document.getElementById("size1")
+// size1.addEventListener("click",(e)=>{
+// let newdata=obj.filter((item,index)=>{
+//   if(item.size=="28"){
+// return true
+// }
+// else{return false}
+// })
+// appenddata(newdata)
+// }) 
+// // size30
+// let size2=document.getElementById("size2")
+// size2.addEventListener("click",(e)=>{
+// let newdata=obj.filter((item,index)=>{
+//   if(item.size=="30"){
+// return true
+// }
+// else{return false}
+// })
+// appenddata(newdata)
+// }) 
+// // size32
+// let size3=document.getElementById("size3")
+// size3.addEventListener("click",(e)=>{
+// let newdata=obj.filter((item,index)=>{
+//   if(item.size=="32"){
+// return true
+// }
+// else{return false}
+// })
+// appenddata(newdata)
+// }) 
+// // sizepartfinished
+// // pricepart23-30
+// let price1=document.getElementById("price1")
+// price1.addEventListener("click",(e)=>{
+// let newdata=obj.filter((item,index)=>{
+//   if(item.price>=25 && item.price<=50){
+// return true
+// }
+// else{return false}
+// })
+// appenddata(newdata)
+// }) 
+// // price2 50-100
+// let price2=document.getElementById("price2")
+// price2.addEventListener("click",(e)=>{
+// let newdata=obj.filter((item,index)=>{
+//   if(item.price>50 && item.price<=100){
+// return true
+// }
+// else{return false}
+// })
+// appenddata(newdata)
+// }) 
+// // price3above100
+// let price3=document.getElementById("price3")
+// price3.addEventListener("click",(e)=>{
+// let newdata=obj.filter((item,index)=>{
+//   if(item.price>100){
+// return true
+// }
+// else{return false}
+// })
+// appenddata(newdata)
+// }) 
+// pricefinished
+// filterfinisheor
+// sortpartA-Z
+let sort1=document.getElementById("sort1");
+sort1.addEventListener("change",()=>{
+  let newdata;
+  
+  if(sort1.value=="A-Z"){
+     newdata=obj.sort((a, b) => {
+  const nameA = a.style.toUpperCase(); 
+  const nameB = b.style.toUpperCase(); 
+  if (nameA < nameB) {
+    return -1;
+  }
+  if (nameA > nameB) {
+    return 1;
+  }
+
+  // names must be equal
+  return 0;
+});
+appenddata(newdata)
+  }
+
+  else if(sort1.value=="Z-A"){
+   newdata=obj.sort((a, b) => {
+  const nameA = a.style.toUpperCase(); 
+  const nameB = b.style.toUpperCase(); 
+  if (nameA > nameB) {
+    return -1;
+  }
+  if (nameA < nameB) {
+    return 1;
+  }
+ 
+
+  // names must be equal
+  return 0;
+});
+appenddata(newdata)
+  }
+  else if(sort1.value=="x"){
+  appenddata(obj) } 
+})
+
+// sortbypricelowtohigh
+let sort2=document.getElementById("sort2");
+sort2.addEventListener("change",()=>{
+  if(sort2.value=="lowtohigh"){
+    let newdata=obj.sort((a,b)=>
+ +a.price-(+(b.price)))
+ appenddata(newdata)}
+  
+  
+    else if(sort2.value=="hightolow"){
+      let newdata=obj.sort((a,b)=>
+  +b.price-(+(a.price)))
+  appenddata(newdata)}
+   else if(sort2.value==""){newdata=obj
+  appenddata(obj)}
+    })
+
+    
+  
+    
+    
+  
+  
+  
+  
+  
+  
+appenddata(obj)
+// addtocartgetitem
+let cartdata=JSON.parse(localStorage.getItem("cart"))||[];
+// favouritesgetitem
+favourite=JSON.parse(localStorage.getItem("favouritedata"))||[];
+
+           function appenddata(data){
+            maindiv.innerHTML=null;
+            data.forEach(element => {
+              let childdiv=document.createElement("div");
+              childdiv.setAttribute("id","child")
+              let img=document.createElement("img");
+              img.setAttribute("src",element.image)
+              let des=document.createElement("h4");
+              des.setAttribute("id","des")
+des.innerText=element.description
+childdiv.setAttribute("class","description");
+let category=document.createElement("p");
+category.innerText=`category:-${element.category}`
+let price=document.createElement("p");
+price.innerText=`Price:-${element.price}$`
+let style=document.createElement("p");
+style.innerText=`style:-${element.style}`
+let button=document.createElement("button");
+button.innerText="Add To Cart"
+button.setAttribute("id","cartbutton");
+let favourites=document.createElement("button");
+favourites.innerText="My favourates";
+favourites.setAttribute("id","favourites")
+// addtocartfunctionality
+button.addEventListener("click",()=>{
+  let isAlready=false;
+  for(i=0;i<cartdata.length;i++){
+    if(cartdata[i].id==element.id){
+      console.log(element.id)
+      isAlready=true;
+      break;
+    }
+  }
+
+  if(isAlready==true){alert("Sorry! You Can't Add Same Product Again.")
+}
+  else if(isAlready==false){
+    cartdata.push({...element,quantity:1})
+    localStorage.setItem("cart",JSON.stringify(cartdata))
+    alert("Yeah! Your Product Added To Cart Successfully")}
+})
+// cartpartend
+// addtofavouratepart
+favourites.addEventListener("click",()=>{
+  let isAlready=false;
+  for(i=0;i<favourite.length;i++){
+    if(favourite[i].id==element.id){
+     
+      isAlready=true;
+      break;
+    }
+  }
+
+  if(isAlready==true){alert("Sorry! You Already Added This Product To Favourates.")
+}
+  else if(isAlready==false){
+    favourite.push(element)
+    localStorage.setItem("favouritedata",JSON.stringify(favourite))
+    alert("Yeah! Your Product Added To favourites section")}
+})
+// favouritesend
+
+
+
+
+
+              childdiv.append(img,des,category,price,style,button,favourites);
+             
+
+              div.append(childdiv)
+              
+            });
+           }
+          
+</script>

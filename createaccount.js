@@ -1,68 +1,74 @@
-// document.getElementById("form").addEventListener("submit", userData);
-
-// function userData(event) {
-//   event.preventDefault();
-
-//   let userdata = {
-//     first_name: form.f_name.value,
-//     last_name: form.l_name.value,
-//     Email: form.email.value,
-//     phone: form.phone.value,
-//     password: form.password.value,
-//     Confirm: form.c_password.value,
-//   };
-
-
-
-//   if (obj.password === obj.Confirm) {
-//     localStorage.setItem("UserDetail", JSON.stringify(obj));
-//   window.location.href = "signinup.html";
-//   } else {
-//     alert("Password not match!");
-//   }
-
-// }
-
-
 let signupDatafromLs=JSON.parse(localStorage.getItem("signup-data"))||[]
 let form=document.querySelector("#form")
-
+let user_alert=document.querySelector('#message')
 form.addEventListener("submit",getUserData)
 
 function getUserData(event){
   event.preventDefault()
 
   let userData={
-            userName:form.f_name.value,
             email:form.email.value,
             password:form.password.value
+            }  
+       if(checkFrom(userData)==true)
+       {
+        if(chekSpicalsymbol(userData.password)==true)
+        {
+           
+            if(checkEmail(userData.email)==true)
+            {
+              signupDatafromLs.push(userData)
+        
+              localStorage.setItem("signup-data",JSON.stringify(signupDatafromLs))
+
+               alert("Signup Successful")
+               window.location.href="index.html"
             }
+            else
+            {
+              alert("This Account Already Exist")
+            }
+           
+        }
+        else{
+            let massage=document.createElement('p')
+            massage.innerText="Weak Password"   
+            massage.style.color="red"
+                user_alert.append(massage)
+                setTimeout(()=>{
+                  location.reload()
+                },1000)
+        }
+       }else{
+        alert("All Field must be filled out")
 
+        setTimeout(()=>{
+          location.reload()
+        },1)
+       }
 
-
-          if(chekSpicalsymbol(userData.password)==true )
-          {
-             
-              if(checkEmail(userData.email)==true)
-              {
-                signupDatafromLs.push(userData)
           
-                localStorage.setItem("signup-data",JSON.stringify(signupDatafromLs))
-
-                 alert("Signup Successful")
-                 window.location.href="signinup.html"
-              }
-              else
-              {
-                alert("This Account Already Exist")
-              }
-             
-          }
-          else{
-
-            alert("Password must contains special Character and length should be more than five.")
-          }
             
+}
+
+function checkFrom(userData){
+    let check=0
+  for(let key in userData)
+  {
+      if(userData[key]=="")
+      {
+          check=1
+      }
+  }
+  if(check==0)
+  {
+    return true
+}
+else{
+   return false
+
+}
+
 }
 
 

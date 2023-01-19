@@ -30,10 +30,12 @@
    }
    /* divpartinput(filterdiv) */
    #firstdiv{
-       border:1px solid red;
+   
+     border:1px solid rgb(181, 179, 179);
+     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
        position:sticky;
        top:0px;
-       width: 20%;height:400px;display:inline;
+       width: 20%;height:650px;display:inline;
    }
    
    

@@ -1,0 +1,106 @@
+
+#maindiv{
+
+    display:flex;
+    flex:wrap;
+justify-content: space-between;
+}
+#cartdiv1{
+    width:60%;
+}
+#cartdiv2{
+    width:30%;text-align:center;margin-right: 100px;
+}
+#childdiv{
+  display:flex;
+    justify-content:space-between;   
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-top: 20px;
+}
+#childdiv2{
+    width:35%;
+    flex:wrap;
+    position:sticky;
+    top:0px;
+    
+}
+#subtotaldiv{
+ 
+   
+}
+#deletebtn{
+    margin-top:80px;
+    margin-right:40px;
+    background-color:red;
+    color:white;
+}
+#ratings{
+    height:70px;
+    display:block;
+}
+#paymentdiv{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height:400px;
+    position:sticky;
+    top:50px;
+}
+/* checkoutbutton */
+#Checkout{
+   
+    background-color: rgb(103, 231, 103);
+    color:white;
+    margin-top:40px;
+   
+  width:300px;
+    height:30px;
+}
+#Checkout:hover{
+    background-color: rgb(48, 148, 48);
+    color:white;
+    width:302px;
+    height:32px;
+}
+/* medaiqueries */
+@media screen and (max-width:1080px){
+    /* adjustment of cartdata and sum */
+    #maindiv{
+        display:block;
+    }
+#cartdiv2{
+  width:100%;
+}
+#cartdiv1{
+width:100%;
+  
+}
+#Checkout{
+    margin-left:00px;
+}
+#button{
+    display:block;
+}
+#subtotaldiv{
+    width:100%;
+}
+/* end */
+}
+
+@media screen and (max-width:468px){
+    #childdiv{
+        display:block;
+    }
+    #childdiv1{
+        width:100%;
+        
+    }
+    #childdiv2{
+        width:100%;
+    }
+    #productimage{
+        width:100%;
+     
+    }
+    #deletebtn{
+margin-top:20px;
+    }
+    }

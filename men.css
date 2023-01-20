@@ -41,8 +41,22 @@
        top:0px;
        width: 20%;height:650px;display:inline;
    }
-   
-   
+   /* filterheading */
+   .filterheading{
+    margin-top:80px;
+    margin-left:20px;
+   }
+   select{
+    margin-left:20px;
+   }
+   @media screen and (max-width:1080px) {
+    .filterheading{
+        margin-top:80px;
+        margin-left:00px;
+       }
+       select{margin-left:00px;}
+    
+   }
    @media screen and (max-width:643px) {
        .inputspan{
         font-size:12px;
@@ -57,7 +71,14 @@
                gap: 20px;
            
            }
+           
+           .select{margin-left:00px;
+        width:50px;
+        
    }
+    
+   }
+   
    
    
    @media screen and (max-width:360px) {

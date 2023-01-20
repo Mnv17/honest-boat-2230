@@ -21,31 +21,38 @@
 <option value="hightolow">High to Low</option></select></div></div>
   <div style="display:flex;">
   <div id="firstdiv"><h1></h1>
-    <h3>Clothing style</h3>
- <div><input id ="style1" class="input" type="checkbox" value="Hoodie"><span class="inputspan">Hoddies</span></div>
- <div><input id ="style2" class="input" type="checkbox" value="Pants"><span class="inputspan">Pants</span></div>
- <div><input id ="style3" class="input" type="checkbox" value="T-Shirts"><span class="inputspan">T-shirts</span></div>
- <div><input id ="style4" class="input" type="checkbox" value="Joggers"><span class="inputspan">Joggers</span></div>
- <div><input id ="style5" class="input" type="checkbox" value="Jackets"><span class="inputspan">Jackets</span></div>
-<h3>Color</h3>
-<div><input id="color1" class="input"  type="checkbox" value="Red"><span class="inputspan">Red</span></div>
-<div><input id="color2" class="input"  type="checkbox" value="Green"><span class="inputspan"> Green</span></div>
-<div><input id="color3" class="input" type="checkbox" value="Grey"><span class="inputspan">Grey</span></div>
-<div><input id="color4" class="input" type="checkbox" value="Black"><span class="inputspan">Black</span></div>
-<div><input id="color5" class="input" type="checkbox" value="Blue"><span class="inputspan">Blue</span></div>
-<h3>Size</h3>
-<div><input id="size1" class="input" type="checkbox" value="28"><span class="inputspan">28</span></div>
-<div><input id="size2" class="input" type="checkbox" value="30"><span class="inputspan">30</span></div>
-<div><input id="size3" class="input" type="checkbox" value="32"><span class="inputspan">32</span></div>
-<h3>Price</h3>
-<div><input id="price1" class="input" id="price1" type="checkbox" value="25-50"><span class="inputspan">25$-50$</span></div>
-<div><input id="price2" class="input" id="price2" type="checkbox" value="50-100"><span class="inputspan">50$-100$</span></div>
-<div><input id="price3" class="input" id="price3" type="checkbox" value=""><span class="inputspan">Above 100$</span></div>
-
-
-
-
-
+    <h3 class="filterheading">Clothing style</h3>
+<select class="select" id="style1">
+  <option value="">Select By Style</option>
+  <option value="Hoodie">Hoodies</option>
+  <option value="Joggers">Joggers</option>
+  <option value="Pants">Pants</option>
+  <option value="T-Shirts">T-SHIRTS</option>
+</select>
+<h3 class="filterheading">Color</h3>
+<select class="select" id="color">
+  <option value="">Select By Color</option>
+  <option value="Red">Red</option>
+  <option value="Green">Green</option>
+  <option value="Grey">Grey</option>
+  <option value="Blue">Blue</option>
+  <option value="Black">Black</option>
+</select>
+<h3 class="filterheading">Size</h3>
+<select class="select" id="size">
+  <option value="">Select By Size</option>
+  <option value="28">28</option>
+  <option value="30">30</option>
+  <option value="32">32</option>
+  
+</select>
+<h3 class="filterheading">Price</h3>
+<select class="select" id="price">
+  <option value="">Select By Price</option>
+  <option value="25-50">25$-50$</option>
+  <option value="50-100">50$-100$</option>
+  <option value="Above">Above 100$</option>
+</select>
 </div>
   <div id="maindiv" ></div>
 </div>
@@ -312,219 +319,75 @@ size:28
 
     // navbarend
 // filteringpart
+// filter by style
+
+
+let style=document.getElementById("style1");
+style.addEventListener("click",(e)=>{
+
+  let newdata=obj.filter((item,index)=>{
+    if(style.value==item.style){
+      return true
+    }
+   else if(style.value==""){
+    return obj
+   }
+  })
+  appenddata(newdata)
+})
+
+// filterbycolor
+let color=document.getElementById("color");
+color.addEventListener("click",(e)=>{
+
+  let newdata=obj.filter((item,index)=>{
+    if(color.value==item.color){
+      return true
+    }
+   else if(color.value==""){
+    return obj
+   }
+  })
+  appenddata(newdata)
+})
+// filterbyprice
+let price=document.getElementById("price");
+price.addEventListener("click",(e)=>{
+  console.log(price.value)
+  let newdata=obj.filter((item,index)=>{
+    
+    if( price.value=="25-50" && item.price>=25 && item.price<=50){
+      console.log("YEs")
+      return true
+    }
+    else if( price.value=="50-100" && item.price>50 && item.price<100){
+      return true
+    }
+    else if( price.value=="Above" && item.price>100){
+      return true
+    }
+   else if(price.value==""){
+    return obj
+   }
+  })
+  appenddata(newdata)
+})
+// filterbysize
+let size=document.getElementById("size");
+size.addEventListener("click",(e)=>{
+
+  let newdata=obj.filter((item,index)=>{
+    if(size.value==item.size){
+      return true
+    }
+   else if(size.value==""){
+    return obj
+   }
+  })
+  appenddata(newdata)
+})
 // inputpartclothing
-let inputvalue=document.getElementsByClassName("input");
-for(let key of inputvalue){
-  key.addEventListener("input",(e)=>{
-let newdata=obj.filter((item,index)=>{
- 
- if(e.target.value==item.style && key.checked==true){
-    return true
-  }
-  else if(e.target.value==item.color &&key.checked==true){
-    return true
-  }
-  else if(e.target.value=="28" && item.size==28  &&key.checked==true){return true}
-  else if(e.target.value=="30" && item.size==30  &&key.checked==true){return true}
-  else if(e.target.value=="32" && item.size==32 &&key.checked==true){return true}
-else if(e.target.value=="25-50" && item.price>=25&&item.price<=50  &&key.checked==true){return true}
-else if(e.target.value=="50-100" && item.price>=50&&item.price<=100  &&key.checked==true){return true}
-else if(e.target.value=="" && item.price>100  &&key.checked==true){return true}
-else if(key.checked==false){return obj}
-})
 
-appenddata(newdata)
-})
-
-}
-// let inputvalue=document.getElementById("input")
-// let style2=document.getElementById("style2");
-// let style1=document.getElementById("style1");
-// style1.addEventListener("click",(e)=>{
-// let newdata=obj.filter((item,index)=>{
-//   if(item.style=="Hoodie" && style1.checked==true &&inpuvalue.value=="Hoodie"){
-// return true
-// }
-// else if(item.style=="Pants" && style2.checked==true){
-//   return true
-// }
-// else{return false}
-// })
-// appenddata(newdata)
-// })
-
-// style2.addEventListener("click",(e)=>{
-// let newdata=obj.filter((item,index)=>{
-//   if(item.style=="Pants"){
-// return true
-// }
-// else{return false}
-// })
-// appenddata(newdata)
-// })
-// style3
-// let style3=document.getElementById("style3");
-// style3.addEventListener("click",(e)=>{
-// let newdata=obj.filter((item,index)=>{
-//   if(item.style=="T-Shirts"){
-// return true
-// }
-// else{return false}
-// })
-// appenddata(newdata)
-// })
-// // style4
-// let style4=document.getElementById("style4");
-// style4.addEventListener("click",(e)=>{
-// let newdata=obj.filter((item,index)=>{
-//   if(item.style=="Joggers"){
-// return true
-// }
-// else{return false}
-// })
-// appenddata(newdata)
-// })
-// // style5 jackets
-// let style5=document.getElementById("style5");
-// style5.addEventListener("click",(e)=>{
-// let newdata=obj.filter((item,index)=>{
-//   if(item.style=="Jackets"){
-// return true
-// }
-// else{return false}
-// })
-// appenddata(newdata)
-// })  
-
-// // stylepartfinished
-
-// // colorpart
-// // redcolor1
-// let color1=document.getElementById("color1")
-// color1.addEventListener("click",(e)=>{
-// let newdata1=obj.filter((item,index)=>{
-//   if(item.color=="Red"){
-// return true
-// }
-// else{return false}
-// })
-// appenddata(newdata1)
-// })  
-// // color2 black
-// let color2=document.getElementById("color2")
-// color2.addEventListener("click",(e)=>{
-// let newdata=obj.filter((item,index)=>{
-//   if(item.color=="Green"){
-// return true
-// }
-// else{return false}
-// })
-// appenddata(newdata)
-// })  
-// // color3 grey
-// let color3=document.getElementById("color3")
-// color3.addEventListener("click",(e)=>{
-// let newdata=obj.filter((item,index)=>{
-//   if(item.color=="Grey"){
-// return true
-// }
-// else{return false}
-// })
-// appenddata(newdata)
-// })  
-// // color4 black
-// let color4=document.getElementById("color4")
-// color4.addEventListener("click",(e)=>{
-// let newdata=obj.filter((item,index)=>{
-//   if(item.color=="Black"){
-// return true
-// }
-// else{return false}
-// })
-// appenddata(newdata)
-// })  
-// // color5 blue
-// let color5=document.getElementById("color5")
-// color5.addEventListener("click",(e)=>{
-// let newdata=obj.filter((item,index)=>{
-//   if(item.color=="Blue"){
-// return true
-// }
-// else{return false}
-// })
-// appenddata(newdata)
-// }) 
-// // colorpartfinished
-
-// // sizepart28
-// let size1=document.getElementById("size1")
-// size1.addEventListener("click",(e)=>{
-// let newdata=obj.filter((item,index)=>{
-//   if(item.size=="28"){
-// return true
-// }
-// else{return false}
-// })
-// appenddata(newdata)
-// }) 
-// // size30
-// let size2=document.getElementById("size2")
-// size2.addEventListener("click",(e)=>{
-// let newdata=obj.filter((item,index)=>{
-//   if(item.size=="30"){
-// return true
-// }
-// else{return false}
-// })
-// appenddata(newdata)
-// }) 
-// // size32
-// let size3=document.getElementById("size3")
-// size3.addEventListener("click",(e)=>{
-// let newdata=obj.filter((item,index)=>{
-//   if(item.size=="32"){
-// return true
-// }
-// else{return false}
-// })
-// appenddata(newdata)
-// }) 
-// // sizepartfinished
-// // pricepart23-30
-// let price1=document.getElementById("price1")
-// price1.addEventListener("click",(e)=>{
-// let newdata=obj.filter((item,index)=>{
-//   if(item.price>=25 && item.price<=50){
-// return true
-// }
-// else{return false}
-// })
-// appenddata(newdata)
-// }) 
-// // price2 50-100
-// let price2=document.getElementById("price2")
-// price2.addEventListener("click",(e)=>{
-// let newdata=obj.filter((item,index)=>{
-//   if(item.price>50 && item.price<=100){
-// return true
-// }
-// else{return false}
-// })
-// appenddata(newdata)
-// }) 
-// // price3above100
-// let price3=document.getElementById("price3")
-// price3.addEventListener("click",(e)=>{
-// let newdata=obj.filter((item,index)=>{
-//   if(item.price>100){
-// return true
-// }
-// else{return false}
-// })
-// appenddata(newdata)
-// }) 
-// pricefinished
-// filterfinisheor
 // sortpartA-Z
 let sort1=document.getElementById("sort1");
 sort1.addEventListener("change",()=>{
@@ -571,27 +434,19 @@ appenddata(newdata)
 // sortbypricelowtohigh
 let sort2=document.getElementById("sort2");
 sort2.addEventListener("change",()=>{
+ let newdata=obj.sort((a,b)=>{
   if(sort2.value=="lowtohigh"){
-    let newdata=obj.sort((a,b)=>
- +a.price-(+(b.price)))
- appenddata(newdata)}
-  
-  
-    else if(sort2.value=="hightolow"){
-      let newdata=obj.sort((a,b)=>
-  +b.price-(+(a.price)))
-  appenddata(newdata)}
-   else if(sort2.value==""){newdata=obj
-  appenddata(obj)}
-    })
+    return  +a.price-(+(b.price))
+  }
+  else if(sort2.value=="hightolow"){
+   
+  return +b.price-(+(a.price))
+ }
+ else if(sort2.value==""){ obj}
 
-    
-  
-    
-    
-  
-  
-  
+}
+ )
+appenddata(newdata) })
   
   
   

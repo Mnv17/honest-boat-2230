@@ -15,29 +15,29 @@
                 <h3>BILLING ADDRESS</h3>
                 <form>
                     Full name
-                    <input type= "text" name=" " placeholder= "Enter name">
+                    <input id="name" type= "text" name=" " placeholder= "Enter name">
                     Email
-                    <input type= "text" name=" "" placeholder= "Enter email">
+                    <input id="email" type= "text" name=" " placeholder= "Enter email">
                     Address
-                    <input type= "text" name=" " placeholder= "Enter address">
+                    <input id="address" type= "text" name=" " placeholder= "Enter address">
                     City
-                    <input type= "text" name=" " placeholder="Enter City">
+                    <input id="city" type= "text" name=" " placeholder="Enter City">
 
  <div id = "zip">
          <label>
                       State
-                 <select>
-                            <option>Choose State</option>
-                            <option>Rajasthan</option>
-                            <option>Hariyana</option>
-                            <option>Uttar Pradesh</option>
-                            <option>Madhya Pradesh</option>
+                 <select id="select1">
+                            <option value="">Choose State</option>
+                            <option value="Rajasthan">Rajasthan</option>
+                            <option value="Haryana">Hariyana</option>
+                            <option value="up">Uttar Pradesh</option>
+                            <option value="mp">Madhya Pradesh</option>
                 </select>
           </label>
 
           <label>
             Zip code
-            <input type="number" name = "" placeholder="Zip code">
+            <input id="Zipcode" type="number" name = "" placeholder="Zip code">
           </label>
        </div>
  </form>             
@@ -58,26 +58,26 @@
                 <img src="images/Rupay-Cards.jpg" width= "100"alt="">
                 <img src="images/maestrosss.jpg" width= "50"alt="">
                 <br><br>
-                  Credit Card Number
-                <input type= "text" name=" " placeholder= "Enter card number">
+                Card Number
+                <input id="card" type= "text" name=" " placeholder= "Enter card number">
                 Expiry Month
-                <input type= "text" name=" " placeholder="Enter Month">
+                <input id="month" type= "text" name=" " placeholder="Enter Month">
 
 <div id = "zip">
         <label>
             Expiry Year
-                     <select>
-                                <option>Choose Year</option>
-                                <option>2024</option>
-                                <option>2025</option>
-                                <option>2026</option>
-                                <option>2027</option>
+                     <select id="select2">
+                                <option value="">Choose Year</option>
+                                <option value="2024">2024</option>
+                                <option value="2025">2025</option>
+                                <option value="2026">2026</option>
+                                <option value="2027">2027</option>
                        </select>
          </label>
 
             <label>
                     CVV 
-                    <input type="number" name = "" placeholder="CVV">
+                    <input id="cvv" type="number" name = "" placeholder="CVV">
             </label>
             </div>
             </form>             
@@ -86,10 +86,11 @@
                <input id="inputotp" type="text" placeholder="Enter OTP">
                <div style="margin-left:250px" id="clockdiv"></div>
          
-         
+               <button id="submit" style="margin-top:20px;margin-left:80px;width:200px;">Submit</button>
             </div> 
+            
         </div>
-      
+        
         </header>
         
     </body>

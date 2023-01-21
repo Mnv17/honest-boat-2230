@@ -32,6 +32,8 @@ decrease.innerHTML="-";
 let ratings=document.createElement("img");
 ratings.setAttribute("src","https://static.thenounproject.com/png/766721-200.png")
 ratings.setAttribute("id","ratings")
+let price=document.createElement("p");
+price.innerHTML=`${item.price}$`
 // decreasing and increasing part
 let i=Quantity.innerText;
 increase.addEventListener("click",()=>{
@@ -44,7 +46,8 @@ increase.addEventListener("click",()=>{
    
     localStorage.setItem("cart",JSON.stringify(cartdata))
   showdata(cartdata)
-  sum()
+
+  location.reload();
 })
 decrease.addEventListener("click",()=>{
     if(item.quantity>1){
@@ -53,12 +56,14 @@ decrease.addEventListener("click",()=>{
     Quantity.innerText=item.quantity
     localStorage.setItem("cart",JSON.stringify(cartdata))
     showdata(cartdata)
-    sum()}
+  
+location.reload();
+}
 })
 // increasedecreasingpartend
 
 
-childdiv2.append(description,description1,ratings,increase,Quantity,decrease)
+childdiv2.append(description,description1,ratings,price,increase,Quantity,decrease)
 let childdiv3=document.createElement("div");
 childdiv3.setAttribute("id","childdiv3")
 let deletebtn=document.createElement("button");
@@ -80,19 +85,46 @@ maindiv.append(childdiv)
 })
 
 }
-// sumpart
+// // sumpart
+// function sum(){
+// let total=document.getElementById("subtotal")
+// let estimated1=document.getElementById("estimated")
+// let sum=0;
+// for(let i=0;i<cartdata.length;i++){
+//  sum=sum+(cartdata[i].quantity*cartdata[i].price)
+ 
+// }
+// total.innerText=sum;
+// estimated1.innerText=`${sum+5}$`
+// console.log(sum)}
+// sum()
+
+// / updated sumpart
+let alertsum=localStorage.getItem("totalsum")
+
+let totalsum=0;
 function sum(){
 let total=document.getElementById("subtotal")
 let estimated1=document.getElementById("estimated")
-let sum=0;
+
 for(let i=0;i<cartdata.length;i++){
- sum=sum+(cartdata[i].quantity*cartdata[i].price)
- 
+ totalsum=totalsum+(cartdata[i].quantity*cartdata[i].price)
+
 }
-total.innerText=sum;
-estimated1.innerText=`${sum+5}$`
-console.log(sum)}
+total.innerText=totalsum;
+estimated1.innerText=`${totalsum+5}$`
+console.log(totalsum)
+}
 sum()
+let checkoutbtn=document.getElementById("Checkout");
+checkoutbtn.addEventListener("click",()=>{
+  localStorage.setItem("totalsum",totalsum+5)
+})
+
+
+
+
+// **********************************************************
 document.addEventListener("click", (evt) => {
     const flyoutEl = document.getElementById("search");
     let targetEl = evt.target; // clicked element      

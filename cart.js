@@ -74,7 +74,7 @@ deletebtn.addEventListener("click",()=>{
     data.splice(index,1)
     localStorage.setItem("cart",JSON.stringify(cartdata))
     showdata(cartdata)
-    sum()
+   location.reload();
 })
 // deletepartend
 childdiv3.append(deletebtn)

@@ -41,11 +41,15 @@
     padding: 10px;
     margin-top: 80px;
     margin-right: 40px;
-    background-color: rgb(54, 3, 3);
+    background-color: rgb(113, 37, 37);
     color: white;
     cursor: pointer;
     border-radius: 10px;
     border: 0px;
+}
+#deletebtn:hover {
+    border-bottom: 3px solid black;
+    cursor: pointer;
 }
 
 #ratings {
@@ -75,8 +79,7 @@
 #Checkout:hover {
     background-color: rgb(4, 60, 4);
     color: white;
-    width: 302px;
-    height: 32px;
+    border-bottom: 3px solid black;
 }
 
 .navbar {

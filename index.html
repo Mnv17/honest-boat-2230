@@ -6,478 +6,78 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>One Destination</title>
-    <style>
-
-        body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-margin:0px; padding: 0px;
-        }
-        .promotion{
-        text-align: center;
-        font-size:small ;
-
-        margin-top: 10px;
-        margin-bottom: 10px;
-
-        }
-        .navbar {
-            width: 100%;
-            background-color: black;
-            font-weight: bold;
-        }
-
-        .navbar-t {
-                padding-top: 20px;
-                padding-right: 15px;
-                justify-content: right;
-                gap: 30px;
-                display: flex;
-                color: white;
-                font-size: large;
-                text-align: center;
-                height: 26px;
-            }
-            .navbar-t>div:nth-child(1) a{
-                text-decoration: none;
-                color: white;
-            }
-            .navbar-t>div:nth-child(2) a{
-                text-decoration: none;
-                color: white;
-            }
-            .navbar-t>div:nth-child(3) a{
-                text-decoration: none;
-                color: white;
-            }
-            .navbar-t>div:nth-child(1) a:hover{
-                text-decoration: underline;
-            }
-            .navbar-t>div:nth-child(2) a:hover{
-                text-decoration: underline;
-            }
-            .navbar-t>div:nth-child(3) a:hover{
-                text-decoration: underline;
-            }
-            
-
-        .navbar-b {
-            padding-left: 8px;
-            font-size: medium;
-            display: flex;
-            color: white;
-            height:120px;
-        }
-
-        .left>img {
-            padding-left: 14px;
-            padding-top: 10px;
-            height: 100px;
-            width: 100px;
-        }
-
-        .left {
-      
-            width: 10%;
-        }
-
-        .middle {
-            /* padding-left: 10px; */
-            padding-top: 20px;
-            width: 65%;
-            gap: 25px;
-            display: flex;
-            margin-top: 20px;
-        }
-        #middle>div a{
-            text-decoration: none;
-            color: white;
-        }
-
-        .right>div>img {
-            height: 20px;
-            width: 20px;
-            /* justify-content: right; */
-        }
-
-        .right {
-            margin-top: 35px;
-            gap: 40px;
-            display: flex;
-            color: white;
-            padding-bottom: 20px;
-            width: 25%;
-            /* justify-content: right; */
-            
-        }
-        .right>div>input{
-            border: none;
-            height: 40px;
-            text-align: center;
-            margin-right: -1.5rem;
-        }
-        .search__button {
-        border: none;
-        background-color: white;
-        align-items: center;
-        margin-top: 5px;
-        height: 45%;
-        padding: 4px 0px;
-        }
-
-        .search__button:hover {
-        cursor: pointer;
-        }
-
-        .search__icon {
-        height: 1.5em;
-        width: 1.3em;
-        fill: #0a0a0a;
-
-        }
-        .top1 {
-            width: 100%;
-            height: 85px;
-
-            display: flex;
-        }
-
-        .top1>div {
-
-            text-align: center;
-            width: 50%;
-            font-size: larger;
-            padding-top: 15px;
-           
-            margin-top: 20px;
-            margin-left: 10px;
-            margin-right: 10px; 
-            background-color: #EEEEEE;
-        }
-
-        .top1>div>img {
-            padding-top: 5px;
-            height: 20px;
-            width: 20px;
-        }
-        .top1 > div > a{
-            color: black;
-        }
-
-        .top2>img {
-            margin-top: 55px;
-            width: 100%;
-        }
-
-        .top3 {
-            /* padding: 12px 8px 0px; */
-            width:98%;
-            margin: auto;
-            display: flex;
-            justify-content: space-between;
-           /* border:1px solid red; */
-      
-        }
-
-        .top3-a {
-            width:16%;
-           font-size: x-large;
-            text-align: center;
-            /* margin: 10px 10px 10px 10px; */
-        }
-        .top3-a>div>a{
-            color: black;
-        }
-.top3-a>div{
-    padding-top: 25px;
-    padding-bottom: 25px;
-
-}
-        .top3-a>div>img {
-            width:100%;
-            /* width: 220px;
-            height: 100px; */
-        }
-
-        .top4 {
-           width:98%;
-           margin: 30px;
-            display: flex;
-            /* border:2px solid red; */
-          
-        }
-        .top4-a{
-            width:31.5%;
-            margin: 10px 10px 10px 10px;
-            margin: auto;
-            text-align: center;
-        }
-
-        .top4-a>img {
-           
-        width: 100%;
-        /* height: 400px; */
-        }
-        .top4 a{
-            color:#353434
-        }
-        .top5{
-       display: flex;
-       margin-top: 30px;
-       
-       font-size: x-large;
-       font-weight: 400;
-        }
-        .top5>div{
-            text-align: center;
-        }
-        .top5>div>img{
-            margin-bottom: 30px;
-            width: 100%;
-        }
-  hr{
- border-color:#263238;
-
-  }
-  .h1{
-    font-size: 300%;
-
-    font-weight: bold;
-    margin-top: 70px;
-    text-align: center;
-  }
-  .top6{
-    width: 40%;
-    display: flex;
-  }
-  /* .top6>img{
-    margin-top: 70px;
-    width: 00%;
-  } */
-  
-  .top7 {
-           width:98%;
-           margin: 30px;
-            display: flex;
-            /* border:2px solid red; */
-          
-        }
-        .top7-a{
-            width:31.5%;
-            margin: 10px 10px 10px 10px;
-      
-            
-            text-align: center;
-        }
-        .top7-a>h1{
-            font-size: 300%;
-            font-weight: bolder;
-        }
-.top7-a>p{
-    font-size: 130%;
-           font-weight: 400;
-}
-        .top7-a>img {
-           
-        width: 100%;
-        /* height: 400px; */
-        }
-        .top7 a{
-font-size: x-large;
-            color:black
-        }
-        .bottom{
-            display: flex;
-        }
-        body{
-    height:100vh
-    }
-    
-
-    
-    
-    .popup{
-        position:absolute;
-        top:-150%;
-         left:50%;
-        opacity:0;
-       transform: translate(-50%,-50%) scale(1.25);
-        width: 380px;
-        padding:20px 30px;
-        background: #fff;
-        box-shadow: 2px 2px 5px 5px rgba(0,0,0,0.15);
-        border-radius:10px;
-         transition:    top 0ms ease-in-out 200ms ,
-                      opacity 200ms ease-in-out 0ms,
-                      transform 200ms ease-in-out 0ms;  
-    }
-    
-     .popup.active{
-        top:50%;
-        opacity:1;
-        transform: translate(-50%,-50%) scale(1);
-        width: 380px;
-        transition:top 0ms ease-in-out 0ms ,
-                      opacity 200ms ease-in-out 0ms,
-                      transform 200ms ease-in-out 0ms;
-    } 
-    
-    
-    .popup .close-btn {
-        position:absolute;
-        top:10px;
-        right:10px;
-        width:15px;
-        height:15px;
-        background: #888;
-            color:#eee;
-            text-align: center;
-            line-height: 15px;
-            border-radius: 15px;
-            cursor:pointer;
-    }
-    
-    .popup .form h2 {
-        text-align: center;
-        color:#222;
-        margin:10px 0px 20px ;
-        font-size:25px;
-    
-    }  
-    .popup .form .form-element {
-        margin:15px 0px ;
-    }
-    .popup .form .form .form-element label {
-        font-size:14px;
-        color:#222;
-    
-    }
-    
-    
-    .popup .form .form-element input[type="text"],
-    .popup .form .form-element input[type="password"]{
-    
-    
-        margin-top:5px;
-        display:block;
-        width:100%;
-        padding:10px;
-        outline:none;
-        border:1px solid #aaa ;
-        border-radius :5px;
-    }
-    
-    .popup .form .form-element input[type="checkbox"]{
-        margin-right:5px;
-    
-    } 
-    
-     .popup .form .form-element button {
-        width:100%;
-        height:40px;
-        border:none;
-        outline:none;
-        font-size:16px;
-        background: #222;
-        color: #f5f5f5;
-        border-radius:10px;
-        cursor:pointer;
-    }
-    
-    .popup .form .form-element a{
-        display:block;
-        text-align:right;
-        font-size:15px;
-        color: #1a79ca;
-        text-decoration: none;
-        font-weight: 600;
-    
-    } 
-    
-
-    #show-login{
-         background-color: black;
-         color:white;
-         font-weight:700;
-         font-size: medium;
-    }
-    #customer a{
-        text-decoration: none;
-        color: white;
-    }
-    #customer a:hover{
-        text-decoration: underline;
-    }
-    </style>
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="./images/one destination.png"> -->
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
 </head>
 
 <body>
-    <div class="promotion"> <a  href=" "><b>
-        Free Shipping for FLX Members! Learn More</b></a> </div>
-  
     <div class="navbar">
         <div class="navbar-t">
-            <div> 
-               <a href="">find a store</a> 
+            <div>
+                <a href="">find a store</a>
             </div>
 
-            <div class = "center" >
-                <a href="" id = "show-login">Welcome,Sign In</a>
-        </div>
-        
-         
-        <div class = "popup">
-           <div class = "close-btn">&times;</div>
-        <div class="form">
-            <h2>Log In </h2>
-            <div class="form-element">
-                <label for="email">Email</label>
-                <input type="text" id = "email" placeholder="Enter email">
+            <div class="center">
+                <a href="./signinup.html" id="show-login">Welcome,Sign In</a>
             </div>
-            <div class="form-element">
-                <label for="password">Password</label>
-                <input type="password" id = "password" placeholder="Enter password">
+
+
+            <div class="popup">
+                <div class="close-btn">&times;</div>
+                <div class="form">
+                    <h2>Log In </h2>
+                    <div class="form-element">
+                        <label for="email">Email</label>
+                        <input type="text" id="email" placeholder="Enter email">
+                    </div>
+                    <div class="form-element">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Enter password">
+                    </div>
+
+                    <div class="form-element">
+                        <!-- <input type="checkbox" id = "remember-me" "> -->
+                        <!-- <label for="remember-me">Remember me</label> -->
+                    </div>
+
+                    <div class="form-element">
+                        <button id="signin"> Sign in</button>
+                    </div>
+                    <div class="form-element">
+                        <a href="#">Forgot password?</a>
+                    </div>
+                    <div class="form-element">
+                        <a href="createaccount.html">Create Account</a>
+                    </div>
+                </div>
             </div>
-        
-            <div class="form-element">
-                <!-- <input type="checkbox" id = "remember-me" "> -->
-                <!-- <label for="remember-me">Remember me</label> -->
-            </div>
-        
-            <div class = "form-element">
-                   <button> Sign in</button>
-            </div>
-            <div class="form-element">
-                <a href="#">Forgot password?</a>
-            </div>
-            <div class="form-element">
-                <a href="createaccount.html">Create Account</a>
-            </div>
-        </div>
-        </div>
             <div id="customer">
-               <a href="">Customer Service</a> 
+                <a href="">Customer Service</a>
             </div>
         </div>
         <hr>
         <div class="navbar-b">
-            <div class="left"><img src="./images/ezgif.com-gif-maker (2).gif" alt="error"></div>
+            <div class="left"> <a href=""> <img src="./images/ezgif.com-gif-maker (2).gif" alt="error"> </a></div>
             <div class="middle" id="middle">
                 <div>
-                   <a href="">NEW ARRIVALS</a> 
+                    <a href="">NEW ARRIVALS</a>
                 </div>
                 <div>
-                   <a href="./men.html">MEN'S</a> 
+                    <a href="./men.html">MEN'S</a>
                 </div>
                 <div>
-                   <a href="">WOMEN'S</a> 
+                    <a href="">WOMEN'S</a>
 
                 </div>
                 <div>
-                  <a href="">KIDS'</a>  
+                    <a href="">KIDS'</a>
 
                 </div>
                 <div>
-                  <a href="">CLOTHING </a>  
+                    <a href="">CLOTHING </a>
 
                 </div>
                 <div>
@@ -509,13 +109,11 @@ font-size: x-large;
                             </g>
                         </svg>
                     </button>
+                    <ul id="search-suggestion">
+                    </ul>
                 </div>
-                <div><img
-                        src="./images/heart (1).png"
-                        alt="image"></div>
-                <div><img
-                        src="./images/shopping-cart.png"
-                        alt="image"></div>
+                <div class="logo"> <a href="./fav.html"> <img src="./images/heart (1).png" alt="image"> </a></div>
+                <div class="logo"><a href="./cart.html"><img src="./images/shopping-cart.png" alt="image"></a></div>
             </div>
         </div>
     </div>
@@ -533,77 +131,92 @@ font-size: x-large;
 
     <div class="top3">
         <div class="top3-a">
-            <div><img src="https://images.footlocker.com/content/dam/final/footlocker/site/homepage/2022/december/221227-fl-hp-pnyeu-mens.jpg"
-                alt=""></div>
-          <div><a href="">SHOP MEN'S</a></div>
-          <div>
-            <img src="https://images.footlocker.com/content/dam/final/footlockercanada/site/homepage/september/210910-FLCA-HP-Brand-6up-adidas-6up.jpg"
-                alt=""></div>
-            
-        
+            <div><img
+                    src="https://images.footlocker.com/content/dam/final/footlocker/site/homepage/2022/december/221227-fl-hp-pnyeu-mens.jpg"
+                    alt=""></div>
+            <div><a href="">SHOP MEN'S</a></div>
+            <div>
+                <img src="https://images.footlocker.com/content/dam/final/footlockercanada/site/homepage/september/210910-FLCA-HP-Brand-6up-adidas-6up.jpg"
+                    alt="">
+            </div>
+
+
         </div>
         <div class="top3-a">
 
-            <div><img src="https://images.footlocker.com/content/dam/final/footlocker/site/homepage/2022/december/221227-fl-hp-pnyeu-womens.jpg"
-                alt=""></div>
+            <div><img
+                    src="https://images.footlocker.com/content/dam/final/footlocker/site/homepage/2022/december/221227-fl-hp-pnyeu-womens.jpg"
+                    alt=""></div>
             <div> <a href="">SHOP WOMEN'S</a></div>
             <div>
                 <img src="https://images.footlocker.com/content/dam/final/footlockercanada/site/homepage/september/210910-FLCA-HP-Brand-6up-nike-6up.jpg"
+                    alt="">
+            </div>
+
+
+
+
+        </div>
+        <div class="top3-a">
+            <div> <img
+                    src="https://images.footlocker.com/content/dam/final/footlocker/site/homepage/2022/december/221227-fl-hp-pnyeu-kids.jpg"
                     alt=""></div>
-            
-          
-           
-           
-        </div>
-        <div class="top3-a">
-            <div> <img src="https://images.footlocker.com/content/dam/final/footlocker/site/homepage/2022/december/221227-fl-hp-pnyeu-kids.jpg"
-                alt=""></div>
             <div><a href="">SHOP KIDS'</a></div>
-            <div> <img src="https://images.footlocker.com/content/dam/final/footlockercanada/site/homepage/september/210910-FLCA-HP-Brand-6up-jordan-6up.jpg"
-                alt=""></div>
-           
-          
-            
-           
-           
+            <div> <img
+                    src="https://images.footlocker.com/content/dam/final/footlockercanada/site/homepage/september/210910-FLCA-HP-Brand-6up-jordan-6up.jpg"
+                    alt=""></div>
+
+
+
+
+
         </div>
         <div class="top3-a">
-            <div>   <img src="https://images.footlocker.com/content/dam/final/footlocker/site/homepage/2022/december/221227-fl-hp-pnyeu-Cloth.jpg"
-                alt=""></div>
+            <div> <img
+                    src="https://images.footlocker.com/content/dam/final/footlocker/site/homepage/2022/december/221227-fl-hp-pnyeu-Cloth.jpg"
+                    alt=""></div>
             <div><a href="">SHOP CLOTHING</a></div>
             <div>
                 <img src="https://images.footlocker.com/content/dam/final/footlockercanada/site/homepage/september/210910-FLCA-HP-Brand-6up-new-balance-6up.jpg"
+                    alt="">
+            </div>
+
+
+
+
+        </div>
+        <div class="top3-a">
+            <div> <img
+                    src="https://images.footlocker.com/content/dam/final/footlocker/site/homepage/2022/december/221227-fl-hp-pnyeu-Acce.jpg"
                     alt=""></div>
-         
-         
-            
-          
-        </div>
-        <div class="top3-a">
-            <div> <img src="https://images.footlocker.com/content/dam/final/footlocker/site/homepage/2022/december/221227-fl-hp-pnyeu-Acce.jpg"
-                alt=""></div>
             <div>
-                <a href="">SHOP ACCESSORIES</a></div>
-            <div><img src="https://images.footlocker.com/content/dam/final/footlocker/site/homepage/2022/october/221024-fl-hp-brands-6-up-hoka.jpg"
-                alt=""></div>
-           
-        
-            
-            
+                <a href="">SHOP ACCESSORIES</a>
+            </div>
+            <div><img
+                    src="https://images.footlocker.com/content/dam/final/footlocker/site/homepage/2022/october/221024-fl-hp-brands-6-up-hoka.jpg"
+                    alt=""></div>
+
+
+
+
         </div>
         <div class="top3-a">
-            <div> <img src="https://images.footlocker.com/content/dam/final/footlocker/site/homepage/2022/december/221227-fl-hp-pnyeu-shop.jpg" alt=""></div>
+            <div> <img
+                    src="https://images.footlocker.com/content/dam/final/footlocker/site/homepage/2022/december/221227-fl-hp-pnyeu-shop.jpg"
+                    alt=""></div>
             <div><a href="">SHOP SALE</a></div>
-            <div> <img src="https://images.footlocker.com/content/dam/final/footlocker/site/homepage/2022/october/221024-fl-hp-brands-6-up-ugg.jpg" alt=""></div>
-           
-      
-         
-           
-           
-         </div>
+            <div> <img
+                    src="https://images.footlocker.com/content/dam/final/footlocker/site/homepage/2022/october/221024-fl-hp-brands-6-up-ugg.jpg"
+                    alt=""></div>
+
+
+
+
+
+        </div>
     </div>
 
-   
+
     <div class="top4">
         <div class="top4-a"><img
                 src="https://images.footlocker.com/content/dam/final/footlocker/site/homepage/2023/january/230107-fl-homepage-jordan-retro-7-3up.jpg"
@@ -628,46 +241,58 @@ font-size: x-large;
         </div>
     </div>
 
-<div class="h1"> New Shoe Arrivals </div>
+    <div class="tag"> 
+        New Shoe Arrivals 
+    </div>
 
 
     <div class="top5">
-<div> <img src="https://images.footlocker.com/content/dam/final/footlocker/site/homepage/20200306-Nike-Air-Force-1-Restock-6up.jpg" alt=""> <br> Nike Air Force 1</div>
-<div><img src="https://images.footlocker.com/content/dam/final/FootLockerInc/site/new-arrivals/new-arrival-6up-13375041.jpg" alt=""> <br> Diadora N9002</div>
-<div><img src="https://images.footlocker.com/content/dam/final/FootLockerInc/site/new-arrivals/new-arrival-6up-V1193901.jpg" alt=""> <br> Nike LeBron XX</div>
-<div><img src="https://images.footlocker.com/content/dam/final/FootLockerInc/site/new-arrivals/new-arrival-6up-Z2523001.jpg" alt=""> <br> Jordan AJ1 Retro Hi OG</div>
-<div><img src="https://images.footlocker.com/content/dam/final/FootLockerInc/site/new-arrivals/new-arrival-6up-ID4290.jpg" alt="">  <br>adidas Response CL</div>
-<div><img src="https://images.footlocker.com/content/dam/final/FootLockerInc/site/new-arrivals/new-arrival-6up-37758401.jpg" alt=""> <br>PUMA MB2 x Slime</div>
+        <div> <img
+                src="https://images.footlocker.com/content/dam/final/footlocker/site/homepage/20200306-Nike-Air-Force-1-Restock-6up.jpg"
+                alt=""> <p>Nike Air Force 1</p> </div>
+        <div><img
+                src="https://images.footlocker.com/content/dam/final/FootLockerInc/site/new-arrivals/new-arrival-6up-13375041.jpg"
+                alt=""> <p>Diadora N9002</p> </div>
+        <div><img
+                src="https://images.footlocker.com/content/dam/final/FootLockerInc/site/new-arrivals/new-arrival-6up-V1193901.jpg"
+                alt=""> <p>Nike LeBron XX</p> </div>
+        <div><img
+                src="https://images.footlocker.com/content/dam/final/FootLockerInc/site/new-arrivals/new-arrival-6up-Z2523001.jpg"
+                alt=""> <p>Jordan AJ1 Retro Hi OG</p> </div>
+        <div><img
+                src="https://images.footlocker.com/content/dam/final/FootLockerInc/site/new-arrivals/new-arrival-6up-ID4290.jpg"
+                alt=""> <p>Adidas Response CL</p> </div>
+        <div><img
+                src="https://images.footlocker.com/content/dam/final/FootLockerInc/site/new-arrivals/new-arrival-6up-37758401.jpg"
+                alt=""> <p>PUMA MB2 x Slime</p> </div>
     </div>
 
     <div class="top6">
         <div>
             <h1>Three Stripe Style</h1>
+            <p>Level up you kid's look with One Destination</p>
+            <button>Destination for Kids ▶</button>
         </div>
         <div>
-            <img src="https://images.footlocker.com/content/dam/final/footlocker/site/homepage/2023/january/220109-fl-homepage-pro-standard-1up.jpg" 
-            alt="">
+            <img src="./images/Screenshot (624).png" alt="">
         </div>
     </div>
-
-
-
-    
-    <div class="top7">
+        <div class="top7">
         <div class="top7-a"><img
                 src="https://images.footlocker.com/content/dam/final/flx/site/homepage/2022/november/221104-flx-hp-v3-3up-fl.jpg"
                 alt="">
-                <h1> New FLX Rewards & Sweepstakes</h1>
-            <p>Use XPoints for exclusive new prizes, like a drone, Bluetooth turntable, Raycon speaker & SO much more!</p>
+            <h1> New FLX Rewards & Sweepstakes</h1>
+            <p>Use XPoints for exclusive new prizes, like a drone, Bluetooth turntable, Raycon speaker & SO much more!
+            </p>
             <a href="">
                 JOIN FLX REWARDS
-              </a> <br><a href="">  REDEEM NOW</a>
+            </a> <br><a href=""> REDEEM NOW</a>
 
         </div>
         <div class="top7-a"><img
                 src="https://images.footlocker.com/content/dam/final/footlocker/site/homepage/2023/january/230111-fl-hp-permanent-3up.jpg"
                 alt="">
-                <h1>Unbeatable Fan Styles</h1>
+            <h1>Unbeatable Fan Styles</h1>
             <p>Show up and show off the love for your team in these winning fits from our fan shop.</p>
             <a href="">
                 EXPLORE THE FAN SHOP</a>
@@ -676,98 +301,121 @@ font-size: x-large;
         <div class="top7-a"><img
                 src="https://images.footlocker.com/content/dam/final/footlocker/site/homepage/2022/december/221227-fl-p3up-hoh-3up.jpg"
                 alt="">
-                <h1>House of Hoops</h1>
-            <p>House of Hoops by Foot Locker is an ode to basketball. A home for premium kicks from Nike, Jordan and Converse, that’s built by the game.</p>
+            <h1>House of Hoops</h1>
+            <p>House of Hoops by Foot Locker is an ode to basketball. A home for premium kicks from Nike, Jordan and
+                Converse, that’s built by the game.</p>
             <a href="">
                 ENTER HOUSE OF HOOPS</a>
 
         </div>
     </div>
-<div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-</div>
-    <div class="bottom">
-        <div>Prices subject to change without notice. Products shown may not be available in our stores.</div>
-        <div><img src="https://www.footlocker.com/built/252/images/shared/ic_sheerid.svg" alt=""></div>
+    <div class="top8">
+        <div class="top8a">
+            <h1>Email Gift Cards</h1>
+            <p>Valid online and at any Foot Locker Inc. brand</p>
+            <button>BUY EMAIL GIFT CARD</button>
+        </div>
+        <div class="top8a">
+            <h1>Rewards Program</h1>
+            <p>Get free shipping, rewards, and more with FLX</p>
+            <button>FLX DETAILS</button>
+        </div>
+        <div class="top8a">
+            <h1>Sign Up For Emails</h1>
+            <p>Stay in the loop, wherever you go</p>
+            <button>SIGN UP FOR EMAILS</button>
+        </div>
+        <div class="top8a">
+            <h1>Mobile App</h1>
+            <p>Get ahead of the game with on-the-go shopping
+            </p>
+            <button>MOBILE APP DETAILS</button>
+        </div>
     </div>
-    <div id="footer">
 
+
+
+
+    <div class="top9">
+        <div class="top9a">
+            <h1>Email Gift Cards</h1>
+            <hr>
+
+            <p> About Us</p>
+            <p> Accessibility Statement</p>
+            <p> Career Opportunities</p>
+            <p> Pages Sitemap</p>
+            <p> Products Sitemap 1</p>
+            <p> Products Sitemap 2</p>
+            <p> Products Sitemap 3</p>
+            <p> Privacy Statement</p>
+            <p> Do Not Sell or Share my Personal Information</p>
+            <p> Limit the Use of my Sensitive Personal Data</p>
+            <p> Ad Choices</p>
+            <p> Terms Of Use</p>
+            <!-- <img src="./images/od.gif" alt=""> -->
+        </div>
+
+
+
+        <div class="top9a">
+            <h1>
+                CUSTOMER SERVICE</h1>
+            <hr>
+
+            <p> Contact Us</p>
+            <p> Ordering Help</p>
+            <p> Order Status</p>
+            <p> Shipping Info</p>
+            <p> Store Pick Up</p>
+            <p> Returns-Exchanges</p>
+            <p> Help </p>
+            <p> COVID-19 Information</p>
+            <p> Check Gift Card Balance</p>
+
+        </div>
+
+        <div class="top9a">
+            <h1>
+                QUICK LINKS</h1>
+            <hr>
+
+            <p> Store Locator</p>
+            <p> Text Sign Up</p>
+            <p> Launch 101</p>
+            <p> Klarna/p>
+            <p> Coupons</p>
+            <p> Affiliates</p>
+            <p> Fit Guarantee</p>
+            <p> Military Discount</p>
+            <p> Student Discount</p>
+            <p> Release Calendar</p>
+            <p> Start a Return/Exchange</p>
+
+        </div>
+        <div class="top9a">
+            <h1>
+                SOCIAL </h1>
+                <hr>
+                <div class="footer-icons">
+                    <a href="https://www.facebook.com/Pepperfry" target="_blank" class="facebook-icon"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/pepperfry" target="_blank" class="twitter-icon"><i
+                            class="fab fa-twitter"></i></a>
+                    <a href="https://www.youtube.com/user/Pepperfrytv" target="_blank" class="youtube-icon"><i
+                            class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/pepperfry_official/" target="_blank" class="instagram-icon"><i
+                            class="fab fa-instagram"></i></a>
+                </div>
+                <div class="google"><img src="https://www.footlocker.com/built/252/images/shared/ic_logo_AppStore.svg" alt="">
+                    <br><img src="https://www.footlocker.com/built/252/images/shared/ic_logo_GooglePlay.svg" alt="">
+                    <hr>
+                    <div><p>  © 2023 Footlocker.com, Inc. All Rights Reserved</p></div>
+                </div>
+            </div></div>
+        </div>
     </div>
 </body>
-<script>
 
-document.addEventListener("click", (evt) => {
-        const flyoutEl = document.getElementById("search");
-        let targetEl = evt.target; // clicked element      
-        do {
-          if(targetEl == flyoutEl) {
-            // This is a click inside, does nothing, just return.
-            toggleSearchDivs();
-            return;
-          }
-          // Go up the DOM
-          targetEl = targetEl.parentNode;
-        } while (targetEl);
-        // This is a click outside.      
-        collapseSearchDivs();
-      });
-
-
-
-    
-    // search.addEventListener("click",()=>{
-    //     toggleSearchDivs();
-    // })
-
-    // search.addEventListener("blur", function() {
-    //     console.log("blur function");
-    //     collapseSearchDivs();
-    // });
-
-    function toggleSearchDivs(){
-        let search = document.getElementById("search");
-        let search_bar = document.getElementById("search-bar");
-        let right_div = document.getElementById("right");
-        let middle_div = document.getElementById("middle");
-
-            search.style.width="100%";
-            search_bar.style.width="100%";
-            right_div.style.width="100%";
-            middle_div.style.width="0%";
-
-        
-    }
-
-    function collapseSearchDivs(){
-
-        let search = document.getElementById("search");
-        let search_bar = document.getElementById("search-bar");
-        let right_div = document.getElementById("right");
-        let middle_div = document.getElementById("middle");
-
-            search.style.width="";
-            search_bar.style.width="";
-            right_div.style.width="";
-            middle_div.style.width="";
-       
-        
-    }
-    let login = document.getElementById("show-login");
-    login.addEventListener("click",(e)=>{
-        e.preventDefault()
-    })
-    document.querySelector("#show-login").addEventListener("click",function(){
-    document.querySelector(".popup").classList.add("active");
-      
-    })
-    
-    document.querySelector(".popup .close-btn").addEventListener("click",function(){
-    document.querySelector(".popup").classList.remove("active")
-    })
-
-</script>
-
+<script src="./index.js"></script>
 </html>

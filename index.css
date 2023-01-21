@@ -7,11 +7,6 @@
     font-weight: bold;
 }
 
-
-
-
-/* navbar */
-
 .navbar-t {
     padding-top: 20px;
     justify-content: right;
@@ -59,13 +54,14 @@
     width: 100%;
 }
 
-.left>img {
+.left>a img {
     padding-left: 14px;
+    margin-right: 10px;
     height: 100px;
     width: 100px;
 }
 
-.left {
+.left>a {
 
     width: 10%;
 }
@@ -81,11 +77,11 @@
     text-decoration: none;
     color: white;
 }
-.logo:hover{
+.logo a :hover{
     cursor: pointer;
 }
 
-.right>div>img {
+.right>div>a img {
     height: 20px;
     width: 20px;
 }
@@ -539,25 +535,69 @@ body {
   }
   .facebook-icon{
     background-color: rgb(27, 120, 241);
+    text-decoration: none;
   } 
   .youtube-icon{
     background-color: rgb(241, 27, 27);
+    text-decoration: none;
   }
    .twitter-icon{
     background-color: rgb(87, 146, 224);
+    text-decoration: none;
    } 
    .instagram-icon{
     background-color: rgb(241, 27, 173);
+    text-decoration: none;
    }
-   .footer-icons a:hover{
+   .facebook-icon:hover{
+    color: rgb(27, 120, 241);
+    background-color: white;
+    cursor: pointer;
+    
+  } 
+  .youtube-icon:hover{
+    color: rgb(241, 27, 27);
+    background-color: white;
+    cursor: pointer;
+  }
+  .twitter-icon:hover{
+    color: rgb(87, 146, 224);
+    background-color: white;
+    cursor: pointer;
+   
+   } 
+   .instagram-icon:hover{
+    color: rgb(241, 27, 173);
+    background-color: white;
+    cursor: pointer;
+   }
+   /* .footer-icons a:hover{
     background-color: #555;
     color: #fff;
     text-decoration: none;
-  }
+  } */
   .fab {
     font-size: 20px;
   }
 .google>img{
         height: 80px;
         width: 140px;
+}
+.suggestion-list{
+    color: rgb(91, 3, 3);
+    /* position: absolute; */
+    /* z-index: 1; */
+    list-style: none;
+    line-height: 40px;
+
+}
+.suggestion-list:hover{
+    cursor: pointer;
+}
+#search-suggestion{
+    position: absolute;
+    z-index: 10;
+    background-color: white;
+    width: 78%
+
 }

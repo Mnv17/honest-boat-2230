@@ -8,7 +8,8 @@ function getUserData(event){
 
   let userData={
             email:form.email.value,
-            password:form.password.value
+            password:form.password.value,
+            full_name:`${form.f_name.value}`
             }  
        if(checkFrom(userData)==true)
        {

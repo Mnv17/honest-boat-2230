@@ -23,12 +23,12 @@ description.innerText=item.description
 let description1=document.createElement("p");
 description1.innerText=item.description1
 let increase=document.createElement("button");
-increase.innerText="Increase Quantity+"
+increase.innerText="+"
 let Quantity=document.createElement("span");
 Quantity.setAttribute("id","Quantity")
 Quantity.innerText=item.quantity
 let decrease=document.createElement("button");
-decrease.innerHTML="Decrease Quantity-";
+decrease.innerHTML="-";
 let ratings=document.createElement("img");
 ratings.setAttribute("src","https://static.thenounproject.com/png/766721-200.png")
 ratings.setAttribute("id","ratings")
@@ -93,3 +93,140 @@ total.innerText=sum;
 estimated1.innerText=`${sum+5}$`
 console.log(sum)}
 sum()
+document.addEventListener("click", (evt) => {
+    const flyoutEl = document.getElementById("search");
+    let targetEl = evt.target; // clicked element      
+    do {
+        if (targetEl == flyoutEl) {
+            // This is a click inside, does nothing, just return.
+            toggleSearchDivs();
+            return;
+        }
+        // Go up the DOM
+        targetEl = targetEl.parentNode;
+    } while (targetEl);
+    // This is a click outside.      
+    collapseSearchDivs();
+});
+function toggleSearchDivs() {
+    let search = document.getElementById("search");
+    let search_bar = document.getElementById("search-bar");
+    let right_div = document.getElementById("right");
+    let middle_div = document.getElementById("middle");
+
+    search.style.width = "100%";
+    search_bar.style.width = "100%";
+    right_div.style.width = "100%";
+    middle_div.style.width = "0%";
+
+
+}
+
+function collapseSearchDivs() {
+
+    let search = document.getElementById("search");
+    let search_bar = document.getElementById("search-bar");
+    let right_div = document.getElementById("right");
+    let middle_div = document.getElementById("middle");
+
+    search.style.width = "";
+    search_bar.style.width = "";
+    right_div.style.width = "";
+    middle_div.style.width = "";
+
+
+}
+let signupDatafromLs=JSON.parse(localStorage.getItem("signup-data"))||[]
+let nameforshow = JSON.parse(localStorage.getItem("name"))||""
+
+let signintext=document.querySelector("#show-login")
+if(nameforshow.length>0){
+signintext.innerHTML= `Welcome, ${nameforshow}`
+}
+else {
+signintext.innerHTML= `Welcome, Sign In`
+}
+
+
+
+// let login = document.getElementById("show-login");
+// login.addEventListener("click",(e)=>{
+//     e.preventDefault()
+// })
+let login = document.getElementById("show-login");
+login.addEventListener("click",(e)=>{
+e.preventDefault()
+})
+document.querySelector("#show-login").addEventListener("click",function(){
+document.querySelector(".popup").classList.add("active");
+
+})
+
+document.querySelector(".popup .close-btn").addEventListener("click",function(){
+document.querySelector(".popup").classList.remove("active")
+})
+
+
+
+let email  = document.querySelector("#email")
+
+let password = document.querySelector("#password")
+
+let submit = document.querySelector("#signin")
+submit.addEventListener("click",submitfunc)
+function submitfunc(){
+let obj = {
+  email:email.value,
+  password:password.value
+  
+}
+loginfunc(obj)
+
+}
+
+
+function loginfunc(obj){
+let emailflag =false;
+let passwordflag = false;  
+
+for(let data of signupDatafromLs){
+
+if(obj.email == data.email){
+emailflag =true;
+   if(obj.password == data.password){
+         alert("Login Successful")
+        let name = data.full_name
+        localStorage.setItem("name",JSON.stringify(name))
+        window.location.reload()
+        passwordflag= true;
+
+}
+
+}
+
+
+
+
+}// loop
+
+
+if(obj.email =="" || obj.password ==""){
+alert("All Field must be filled out")
+}
+
+else if(emailflag == false){
+alert("Invalid Credential")
+}
+
+if(emailflag == true && passwordflag == false){
+alert("Wrong Password")
+}
+
+
+}//function 
+
+
+function gotocreateaccount(){
+window.location.href="./createaccount.html"
+
+}

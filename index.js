@@ -159,10 +159,8 @@ obj=data;
 
 });
 
+//selected value in search result--start
 search.addEventListener("input", (e)=>{
-console.log(e.target.value);
-
-
 let searchResult=obj.filter((item,index)=>{
 
   console.log((item.description).includes(e.target.value));
@@ -172,20 +170,21 @@ let searchResult=obj.filter((item,index)=>{
 })
 
 searchResult=searchResult.map((data)=>{
-  return "<li class='suggestion-list' data-id="+data.id+">"+data.description+"</li>";
+  return "<li class='suggestion-list' data-style="+data.style+">"+data.description+"</li>";
 })
 document.getElementById("search-suggestion").innerHTML=null;
 document.getElementById("search-suggestion").innerHTML=searchResult.join(" ");
-document.querySelector("suggestion-list").addEventListener("click",(e)=>{
-  e.data("style")
+document.querySelector(".suggestion-list").addEventListener("click",(e)=>{
+  // console.log(e.target.dataset.style);
   let searchResult=obj.filter((item,index)=>{
-    if(item.style==e.data("style")){
+    if(item.style==e.target.dataset.style){
       return true
     }
   })
-  if(searchResult.category){
-    window.location.href="./men.html"
+  if(searchResult[0].category=="Men"){
+    window.location.href="./men.html?style="+e.target.dataset.style;
   }
 });
 })
+//selected value in search result--end
 // **********************Search****************************************

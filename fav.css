@@ -40,30 +40,33 @@
 }
 
 #deletebtn {
-    margin-top: 80px;
+    /* margin-top: 80px; */
     display: block;
-    margin-right: 40px;
-    background-color: red;
+    /* margin-right: 40px; */
+    background-color: rgb(113, 37, 37);
     color: white;
+    padding: 6px;
+    width: 100px;
+    border-radius: 8px;
 }
 
 #deletebtn:hover {
-    width: 100px;
-    background-color: rgb(234, 92, 92);
-    height: 22px;
+    border-bottom: 3px solid black;
+    cursor: pointer;
 }
 
 #addtocartbtn {
     margin-top: 30px;
-    background-color: green;
+    background-color: rgb(135, 144, 11);
     color: white;
-    width: 95px;
+    padding: 5px;
+    width: 100px;
+    border-radius: 8px;
 }
 
 #addtocartbtn:hover {
-    width: 97px;
-    background-color: rgb(87, 199, 87);
-    height: 22px;
+    border-bottom: 3px solid black;
+    cursor: pointer;
 }
 
 #ratings {
@@ -156,12 +159,7 @@
 
 #subtotaldiv {}
 
-#deletebtn {
-    margin-top: 80px;
-    margin-right: 40px;
-    background-color: red;
-    color: white;
-}
+
 
 #ratings {
     height: 70px;

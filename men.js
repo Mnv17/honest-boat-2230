@@ -1,267 +1,32 @@
  let div=document.getElementById("maindiv")
- let obj=[{id:1,
-  image:"https://images.footlocker.com/is/image/EBFL2/18347023?wid=249&hei=249&fmt=png-alpha",
-description:"Nick JDI Fleence Hoodie",
-price:29,
-category:"Men",
-style:"Hoodie",
-color:"Black",
-size:30
- },
-{id:2,
-  image:"https://images.footlocker.com/is/image/EBFL2/V2645010?wid=249&hei=249&fmt=png-alpha",
-description:"Nick Club Full Zip Hoodie",
-price:39,
-category:"Men",
-style:"Hoodie",
-color:"Black",
-size:28
-},
-{id:3,
-  image:"https://images.footlocker.com/is/image/EBFL2/D3129063?wid=249&hei=249&fmt=png-alpha",
-description:"Nick NSW  PANTS",
-price:49,
-category:"Men",
-style:"Pants",
-color:"White",
-size:32
-},
-{id:4,
-  image:"https://images.footlocker.com/is/image/EBFL2/62388151?wid=249&hei=249&fmt=png-alpha",
-description:"NikE T-SHIRTS",
-price:79,
-category:"Men",
-style:"T-Shirts",
-color:"Red",
-size:28
-},
-{id:5,
-  image:"https://images.footlocker.com/is/image/EBFL2/122WP4BK?wid=249&hei=249&fmt=png-alpha",
-description:"MCR AMSTERDEM UTILITY PANTS",
-price:55,
-category:"Men",
-style:"Pants",
-color:"Black",
-size:32
-},
-{id:6,
-  image:"https://images.footlocker.com/is/image/EBFL2/42388069?wid=249&hei=249&fmt=png-alpha",
-description:"NIKE AIR T-SHIRTS",
-price:48,
-category:"Men",
-style:"T-Shirts",
-color:"Blue",
-size:32
-},
-{id:7,
-  image:"https://images.footlocker.com/is/image/EBFL2/18347029?wid=249&hei=249&fmt=png-alpha",
-description:"Nick JDI FLICE UDI",
-price:99,
-category:"Men",
-style:"Hoodie",
-color:"Grey",
-size:32
-},
-{id:8,
-  image:"https://images.footlocker.com/is/image/EBFL2/D3129010?wid=249&hei=249&fmt=png-alpha",
-description:"Nick NSW CARGO CLUB PANTS",
-price:43,
-category:"Men",
-style:"Pants",
-color:"Black",
-size:32
-},
-{id:9,
-  image:"https://images.footlocker.com/is/image/EBFL2/U4489010?wid=249&hei=249&fmt=png-alpha",
-description:"NIKE FULL ZIP HOODIE",
-price:39,
-category:"Men",
-style:"Hoodie",
-color:"Black",
-size:28
-},
-{id:10,
-  image:"https://images.footlocker.com/is/image/EBFL2/V2671010?wid=249&hei=249&fmt=png-alpha",
-description:"NiKE CLUB JOGGERS",
-price:59,
-category:"Men",
-style:"Joggers",
-color:"Black",
-size:30
-},
-{id:11,
-  image:"https://images.footlocker.com/is/image/EBFL2/U4495010?wid=249&hei=249&fmt=png-alpha",
-description:"Nick FLEECE JOGGERS",
-price:49,
-category:"Men",
-style:"Joggers",
-color:"Black",
-size:28
-},
-{id:12,
-  image:"https://images.footlocker.com/is/image/EBFL2/C4489259?wid=249&hei=249&fmt=png-alpha",
-description:"NiKE FLEECE FULL ZIP HOODIE",
-price:79,
-category:"Men",
-style:"Hoodie",
-color:"Brown",
-size:32
-},
-{id:13,
-  image:"https://images.footlocker.com/is/image/EBFL2/U4489063?wid=249&hei=249&fmt=png-alpha",
-description:"NiKE FLEECE FULL ZIP HOODIE",
-price:149,
-category:"Men",
-style:"Hoodie",
-color:"White",
-size:28
-},
-{id:14,
-  image:"https://images.footlocker.com/is/image/EBFL2/V2654663?wid=249&hei=249&fmt=png-alpha",
-description:"NiKE CLUB PULLOVER HODDIE",
-price:123,
-category:"Men",
-style:"Hoodie",
-color:"Pink",
-size:30
-},
-{id:15,
-  image:"https://images.footlocker.com/is/image/EBFL2/M6474407?wid=249&hei=249&fmt=png-alpha",
-description:"NIKE FLEECE FULL ZIP HOODIE",
-price:99,
-category:"Men",
-style:"Hoodie",
-color:"Blue",
-size:28
-},
-{id:16,
-  image:"https://images.footlocker.com/is/image/EBFL2/U4489072?wid=249&hei=249&fmt=png-alpha",
-description:"NIKE TECH FULL ZIP HODDIE",
-price:89,
-category:"Men",
-style:"Hoodie",
-color:"White",
-size:30
-},
-{id:17,
-  image:"https://images.footlocker.com/is/image/EBFL2/U4495063?wid=249&hei=249&fmt=png-alpha",
-description:"NIKE FLEECE JOGGERS",
-price:79,
-category:"Men",
-style:"Joggers",
-color:"white",
-size:32
-},
-{id:18,
-  image:"https://images.footlocker.com/is/image/EBFL2/V2671063?wid=249&hei=249&fmt=png-alpha",
-description:"Nick CLUB JOGGERS",
-price:69,
-category:"Men",
-style:"Joggers",
-color:"White",
-size:28
-},
-{id:19,
-  image:"https://images.footlocker.com/is/image/EBFL2/V2654259?wid=249&hei=249&fmt=png-alpha",
-description:"NIKE CLUB PULL OVER HOODIE",
-price:199,
-category:"Men",
-style:"Hoodie",
-color:"Brown",
-size:28
-},
-{id:20,
-  image:"https://images.footlocker.com/is/image/EBFL2/762FCRDW?wid=249&hei=249&fmt=png-alpha",
-description:"NBA STAIN JACKETS",
-price:449,
-category:"Men",
-style:"Jackets",
-color:"Red",
-size:28
-},
-{id:21,
-  image:"https://images.footlocker.com/is/image/EBFL2/V2654063?wid=249&hei=249&fmt=png-alpha",
-description:"Nick CLUB PULLOVER HODDIE",
-price:429,
-category:"Men",
-style:"Hoodie",
-color:"White",
-size:32
-},
-{id:22,
-  image:"https://images.footlocker.com/is/image/EBFL2/V2654341?wid=249&hei=249&fmt=png-alpha",
-description:"NICK CLUB PULLOVER HODDIE",
-price:149,
-category:"Men",
-style:"Hoddie",
-color:"Green",
-size:32
-},
-{id:23,
-  image:"https://images.footlocker.com/is/image/EBFL2/Q5152010?wid=249&hei=249&fmt=png-alpha",
-description:"Nick CLUB PULLOVER HODDIE",
-price:49,
-category:"Men",
-style:"Hoodie",
-color:"Black",
-size:28
-},
-{id:24,
-  image:"https://images.footlocker.com/is/image/EBFL2/J6977002?wid=249&hei=249&fmt=png-alpha",
-description:"NiKE AIR CRUE FLEECE",
-price:89,
-category:"Men",
-style:"Jackets",
-color:"Grey",
-size:28
-},
-{id:25,
-  image:"https://images.footlocker.com/is/image/EBFL2/U4489532?wid=249&hei=249&fmt=png-alpha",
-description:"NiKE FLEECE TECH HODDIE",
-price:179,
-category:"Men",
-style:"Hoodie",
-color:"Pink",
-size:30
-},
-{id:26,
-  image:"https://images.footlocker.com/is/image/EBFL2/V2645063?wid=249&hei=249&fmt=png-alpha",
-description:"NIKE CLUB HOODIE",
-price:99,
-category:"Men",
-style:"Hoodie",
-color:"White",
-size:28
-},
-{id:27,
-  image:"https://images.footlocker.com/is/image/EBFL2/V2645063?wid=249&hei=249&fmt=png-alpha",
-description:"NIKE CLUB HOODIE",
-price:99,
-category:"Men",
-style:"Hoodie",
-color:"White",
-size:30
-},
-{id:28,
-  image:"https://images.footlocker.com/is/image/EBFL2/U4489657?wid=249&hei=249&fmt=png-alpha",
-description:"NIKE TECH  CLUB HOODIE",
-price:89,
-category:"Men",
-style:"Hoodie",
-color:"Red",
-size:28
-},
-]
+ let obj={};
+fetch("./men.json")
+.then(res=>res.json())
+.then(data=>{
+obj=data;
+afterPromise();
+});
 // navbarcode
 
     // navbarend
 // filteringpart
 // filter by style
 
+function afterPromise(){
 
-let style=document.getElementById("style1");
+  //selected value in search result--start
+  const params = new Proxy(new URLSearchParams(window.location.search), {
+    get: (searchParams, prop) => searchParams.get(prop),
+  });
+  // Get the value of "some_key" in eg "https://example.com/?some_key=some_value"
+  let value = params.style;
+  //selected value in search result--end
+
+  let style=document.getElementById("style1");
+  
+
 style.addEventListener("click",(e)=>{
-
+  e.preventDefault()
   let newdata=obj.filter((item,index)=>{
     if(style.value==item.style){
       return true
@@ -272,6 +37,8 @@ style.addEventListener("click",(e)=>{
   })
   appenddata(newdata)
 })
+
+
 
 // filterbycolor
 let color=document.getElementById("color");
@@ -387,7 +154,15 @@ appenddata(newdata)
   
   
   
-appenddata(obj)
+appenddata(obj);
+//selected value in search result--start
+
+if(null!==value && value!==undefined && value!==""){
+  style.value = value;
+  // style.dispatchEvent(new Event('click'));
+  style.click();
+}
+//selected value in search result--end
 // addtocartgetitem
 let cartdata=JSON.parse(localStorage.getItem("cart"))||[];
 // favouritesgetitem
@@ -467,7 +242,7 @@ favourites.addEventListener("click",()=>{
             });
            }
 
-
+          }
 // **********************Search****************************************
     
     
@@ -518,4 +293,99 @@ function collapseSearchDivs() {
 }
 
 
+
+// **********************Signin****************************************
+
+let signupDatafromLs=JSON.parse(localStorage.getItem("signup-data"))||[]
+let nameforshow = JSON.parse(localStorage.getItem("name"))||""
+
+let signintext=document.querySelector("#show-login")
+if(nameforshow.length>0){
+  signintext.innerHTML= `Welcome, ${nameforshow}`
+}
+else {
+  signintext.innerHTML= `Welcome, Sign In`
+}
+
+
+
+let login = document.getElementById("show-login");
+login.addEventListener("click",(e)=>{
+    e.preventDefault()
+})
+document.querySelector("#show-login").addEventListener("click",function(){
+document.querySelector(".popup").classList.add("active");
+  
+})
+
+document.querySelector(".popup .close-btn").addEventListener("click",function(){
+document.querySelector(".popup").classList.remove("active")
+})
+
+
+
+  let email  = document.querySelector("#email")
+
+  let password = document.querySelector("#password")
+
+  let submit = document.querySelector("#signin")
+  submit.addEventListener("click",submitfunc)
+  function submitfunc(){
+    let obj = {
+      email:email.value,
+      password:password.value
+      
+ }
+    loginfunc(obj)
+
+  }
+
+
+  function loginfunc(obj){
+    let emailflag =false;
+    let passwordflag = false;  
+
+    for(let data of signupDatafromLs){
+
+ if(obj.email == data.email){
+  emailflag =true;
+       if(obj.password == data.password){
+             alert("Login Successful")
+            let name = data.full_name
+            localStorage.setItem("name",JSON.stringify(name))
+            window.location.reload()
+            passwordflag= true;
+   
+}
+
+}
+
+
+
+
+}// loop
+
+
+if(obj.email =="" || obj.password ==""){
+  alert("All Field must be filled out")
+}
+
+  else if(emailflag == false){
+  alert("Invalid Credential")
+}
+
+if(emailflag == true && passwordflag == false){
+  alert("Wrong Password")
+}
+
+
+  }//function 
+
+
+function gotocreateaccount(){
+  window.location.href="./createaccount.html"
+  
+}
+
+    // **********************Signin****************************************
            

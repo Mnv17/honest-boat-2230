@@ -602,7 +602,7 @@ body {
     width: 78%
 
 }
-
+/* Media Qurey */
 
 @media all and (min-width:200px) and (max-width:1380px){
     .middle{

@@ -184,6 +184,9 @@ document.querySelector(".suggestion-list").addEventListener("click",(e)=>{
   if(searchResult[0].category=="Men"){
     window.location.href="./men.html?style="+e.target.dataset.style;
   }
+  if(searchResult[0].category=="Women"){
+    window.location.href="./women.html?style="+e.target.dataset.style;
+  }
 });
 })
 //selected value in search result--end

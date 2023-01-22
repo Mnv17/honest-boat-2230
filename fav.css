@@ -157,10 +157,6 @@
 
 }
 
-#subtotaldiv {}
-
-
-
 #ratings {
     height: 70px;
     display: block;
@@ -237,7 +233,7 @@
 
 
 .navbar-b {
-    font-size: medium;
+    font-size: small;
     display: flex;
     color: white;
     height: 120px;

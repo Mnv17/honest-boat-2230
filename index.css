@@ -213,9 +213,10 @@
 }
 
 .top5 {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
     margin-top: 30px;
-    font-size: x-large;
+    font-size:15px;
     font-weight: 400;
 }
 
@@ -281,13 +282,15 @@ hr {
 }
 
 .top7 {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
     width: 98%;
     margin: 30px;
-    display: flex;
+  
 }
 
 .top7-a {
-    width: 31.5%;
+    /* width: 31.5%; */
     margin: 10px 10px 10px 10px;
 
 
@@ -446,7 +449,8 @@ body {
     padding-top: 80px;
     /* padding-left: 10px; */
     /* padding-right: 10px; */
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
     width: 100%;
     margin: auto;
     background-color: black;
@@ -458,7 +462,7 @@ body {
 .top8a {
     margin-left: 10px;
     margin-right: 10px;
-    width: 22%;
+    /* width: 22%; */
 }
 .top8>div:nth-child(3) button{
     margin-top: 30px;
@@ -492,7 +496,8 @@ body {
     padding-top: 80px;
     /* padding-left: 30px; */
     /* padding-right: 50px; */
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
     width: 100%;
     background-color: black;
     color: white;
@@ -502,7 +507,7 @@ body {
 .top9a {
     margin-left: 10px;
     margin-right: 10px;
-    width: 22%;
+    /* width: 22%; */
     /* margin: auto; */
 }
 .top9a>h1 {
@@ -548,29 +553,7 @@ body {
    .instagram-icon{
     background-color: rgb(241, 27, 173);
     text-decoration: none;
-   }
-   .facebook-icon:hover{
-    color: rgb(27, 120, 241);
-    background-color: white;
-    cursor: pointer;
-    
-  } 
-  .youtube-icon:hover{
-    color: rgb(241, 27, 27);
-    background-color: white;
-    cursor: pointer;
-  }
-  .twitter-icon:hover{
-    color: rgb(87, 146, 224);
-    background-color: white;
-    cursor: pointer;
-   
-   } 
-   .instagram-icon:hover{
-    color: rgb(241, 27, 173);
-    background-color: white;
-    cursor: pointer;
-   }
+
    /* .footer-icons a:hover{
     background-color: #555;
     color: #fff;
@@ -599,5 +582,3 @@ body {
     z-index: 10;
     background-color: white;
     width: 78%
-
-}

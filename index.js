@@ -1,4 +1,4 @@
-// **********************Search****************************************
+
     
     
 document.addEventListener("click", (evt) => {
@@ -47,10 +47,6 @@ function collapseSearchDivs() {
 
 }
 
-// **********************Search****************************************
-
-
-// **********************Signin****************************************
 
 let signupDatafromLs=JSON.parse(localStorage.getItem("signup-data"))||[]
 let nameforshow = JSON.parse(localStorage.getItem("name"))||""
@@ -143,10 +139,6 @@ function gotocreateaccount(){
   
 }
 
-    // **********************Signin****************************************
-
-
-// **********************Search****************************************
 
 let search = document.getElementById("search-bar");
 
@@ -159,8 +151,7 @@ obj=data;
 
 });
 
-//selected value in search result--start
-search.addEventListener("input", (e)=>{
+
 let searchResult=obj.filter((item,index)=>{
 
   console.log((item.description).includes(e.target.value));
@@ -170,21 +161,4 @@ let searchResult=obj.filter((item,index)=>{
 })
 
 searchResult=searchResult.map((data)=>{
-  return "<li class='suggestion-list' data-style="+data.style+">"+data.description+"</li>";
-})
-document.getElementById("search-suggestion").innerHTML=null;
-document.getElementById("search-suggestion").innerHTML=searchResult.join(" ");
-document.querySelector(".suggestion-list").addEventListener("click",(e)=>{
-  // console.log(e.target.dataset.style);
-  let searchResult=obj.filter((item,index)=>{
-    if(item.style==e.target.dataset.style){
-      return true
-    }
-  })
-  if(searchResult[0].category=="Men"){
-    window.location.href="./men.html?style="+e.target.dataset.style;
-  }
-});
-})
-//selected value in search result--end
-// **********************Search****************************************
+

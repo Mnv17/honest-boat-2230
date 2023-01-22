@@ -1,4 +1,4 @@
-// *********************Search***************************************
+
     
     
 document.addEventListener("click", (evt) => {
@@ -47,10 +47,6 @@ function collapseSearchDivs() {
 
 }
 
-// *********************Search***************************************
-
-
-// *********************Signin***************************************
 
 let signupDatafromLs=JSON.parse(localStorage.getItem("signup-data"))||[]
 let nameforshow = JSON.parse(localStorage.getItem("name"))||""
@@ -143,10 +139,6 @@ function gotocreateaccount(){
   
 }
 
-    // *********************Signin***************************************
-
-
-// *********************Search***************************************
 
 let search = document.getElementById("search-bar");
 
@@ -159,9 +151,6 @@ obj=data;
 
 });
 
-search.addEventListener("input", (e)=>{
-console.log(e.target.value);
-
 
 let searchResult=obj.filter((item,index)=>{
 
@@ -172,20 +161,4 @@ let searchResult=obj.filter((item,index)=>{
 })
 
 searchResult=searchResult.map((data)=>{
-  return "<li class='suggestion-list' data-id="+data.id+">"+data.description+"</li>";
-})
-document.getElementById("search-suggestion").innerHTML=null;
-document.getElementById("search-suggestion").innerHTML=searchResult.join(" ");
-document.querySelector("suggestion-list").addEventListener("click",(e)=>{
-  e.data("style")
-  let searchResult=obj.filter((item,index)=>{
-    if(item.style==e.data("style")){
-      return true
-    }
-  })
-  if(searchResult.category){
-    window.location.href="./men.html"
-  }
-});
-})
-// *********************Search***************************************
+

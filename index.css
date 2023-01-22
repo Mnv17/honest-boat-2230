@@ -214,10 +214,9 @@
 }
 
 .top5 {
-    display: grid;
-    grid-template-columns: repeat(6,1fr);
+    display: flex;
     margin-top: 30px;
-    font-size:15px;
+    font-size: x-large;
     font-weight: 400;
 }
 
@@ -283,15 +282,13 @@ hr {
 }
 
 .top7 {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
     width: 98%;
     margin: 30px;
-  
+    display: flex;
 }
 
 .top7-a {
-    /* width: 31.5%; */
+    width: 31.5%;
     margin: 10px 10px 10px 10px;
 
 
@@ -450,8 +447,7 @@ body {
     padding-top: 80px;
     /* padding-left: 10px; */
     /* padding-right: 10px; */
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
+    display: flex;
     width: 100%;
     margin: auto;
     background-color: black;
@@ -463,7 +459,7 @@ body {
 .top8a {
     margin-left: 10px;
     margin-right: 10px;
-    /* width: 22%; */
+    width: 22%;
 }
 .top8>div:nth-child(3) button{
     margin-top: 30px;
@@ -497,8 +493,7 @@ body {
     padding-top: 80px;
     /* padding-left: 30px; */
     /* padding-right: 50px; */
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
+    display: flex;
     width: 100%;
     background-color: black;
     color: white;
@@ -508,7 +503,7 @@ body {
 .top9a {
     margin-left: 10px;
     margin-right: 10px;
-    /* width: 22%; */
+    width: 22%;
     /* margin: auto; */
 }
 .top9a>h1 {
@@ -607,9 +602,6 @@ body {
     width: 78%
 
 }
-
-/* Media Qurey */
-
 
 @media all and (min-width:200px) and (max-width:1380px){
     .middle{

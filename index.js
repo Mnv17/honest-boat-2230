@@ -182,6 +182,9 @@ let searchResult=obj.filter((item,index)=>{
   if(item.style==e.data("style")){
     return true
   }
+  if(searchResult[0].category=="Women"){
+    window.location.href="./women.html?style="+e.target.dataset.style;
+  }
 })
 if(searchResult.category){
   window.location.href="./men.html"

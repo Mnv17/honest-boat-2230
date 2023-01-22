@@ -1,98 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Payment Page</title>
     <link rel="stylesheet" href="payment.css">
+    <link rel="shortcut icon" type="image/x-icon" href="./images/Untitled design.png">
 </head>
-    <body>
+
+<body>
     <header>
-      
         <div class="container">
             <div class="left">
                 <h3>BILLING ADDRESS</h3>
                 <form>
                     Full name
-                    <input id="name" type= "text" name=" " placeholder= "Enter name">
+                    <input id="name" type="text" name=" " placeholder="Enter name">
                     Email
-                    <input id="email" type= "text" name=" " placeholder= "Enter email">
+                    <input id="email" type="text" name=" " placeholder="Enter email">
                     Address
-                    <input id="address" type= "text" name=" " placeholder= "Enter address">
+                    <input id="address" type="text" name=" " placeholder="Enter address">
                     City
-                    <input id="city" type= "text" name=" " placeholder="Enter City">
+                    <input id="city" type="text" name=" " placeholder="Enter City">
 
- <div id = "zip">
-         <label>
-                      State
-                 <select id="select1">
-                            <option value="">Choose State</option>
-                            <option value="Rajasthan">Rajasthan</option>
-                            <option value="Haryana">Hariyana</option>
-                            <option value="up">Uttar Pradesh</option>
-                            <option value="mp">Madhya Pradesh</option>
-                </select>
-          </label>
+                    <div id="zip">
+                        <label>
+                            State
+                            <select id="select1">
+                                <option value="">Choose State</option>
+                                <option value="Rajasthan">Rajasthan</option>
+                                <option value="Haryana">Hariyana</option>
+                                <option value="up">Uttar Pradesh</option>
+                                <option value="mp">Madhya Pradesh</option>
+                            </select>
+                        </label>
 
-          <label>
-            Zip code
-            <input id="Zipcode" type="number" name = "" placeholder="Zip code">
-          </label>
-       </div>
- </form>             
-</div>
-
-
+                        <label>
+                            Zip code
+                            <input id="Zipcode" type="number" name="" placeholder="Zip code">
+                        </label>
+                    </div>
+                </form>
+            </div>
 
 
-           <div class = "right">
-            <h3>PAYMENT</h3>
 
-            <form>
-             
-                Accepted Card
-                <br>
-                
-                <img src="images/visa-mastercard.png" width="150" alt="">
-                <img src="images/Rupay-Cards.jpg" width= "100"alt="">
-                <img src="images/maestrosss.jpg" width= "50"alt="">
-                <br><br>
-                Card Number
-                <input id="card" type= "text" name=" " placeholder= "Enter card number">
-                Expiry Month
-                <input id="month" type= "text" name=" " placeholder="Enter Month">
 
-<div id = "zip">
-        <label>
-            Expiry Year
-                     <select id="select2">
+            <div class="right">
+                <h3>PAYMENT</h3>
+
+                <form>
+
+                    Accepted Card
+                    <br>
+
+
+                    <img src="./images/cards image.jpg" width="250" alt="">
+                    <br><br>
+                    Card Number
+                    <input id="card" type="text" name=" " placeholder="Enter card number">
+                    Expiry Month
+                    <input id="month" type="text" name=" " placeholder="Enter Month">
+
+                    <div id="zip">
+                        <label>
+                            Expiry Year
+                            <select id="select2">
                                 <option value="">Choose Year</option>
                                 <option value="2024">2024</option>
                                 <option value="2025">2025</option>
                                 <option value="2026">2026</option>
                                 <option value="2027">2027</option>
-                       </select>
-         </label>
+                            </select>
+                        </label>
 
-            <label>
-                    CVV 
-                    <input id="cvv" type="number" name = "" placeholder="CVV">
-            </label>
+                        <label>
+                            CVV
+                            <input id="cvv" type="number" name="" placeholder="CVV">
+                        </label>
+                    </div>
+                </form>
+                <!-- <input type="submit" name="" value="Generate OTP"> -->
+                <button id="button">Generate OTP</button>
+                <input id="inputotp" type="text" placeholder="Enter OTP">
+                <div style="margin-left:250px" id="clockdiv"></div>
+
+                <button id="submit" style="margin-top:20px;margin-left:80px;width:200px;">Submit</button>
             </div>
-            </form>             
-       <!-- <input type="submit" name="" value="Generate OTP"> -->
-       <button id ="button">Generate OTP</button>
-               <input id="inputotp" type="text" placeholder="Enter OTP">
-               <div style="margin-left:250px" id="clockdiv"></div>
-         
-               <button id="submit" style="margin-top:20px;margin-left:80px;width:200px;">Submit</button>
-            </div> 
-            
+
         </div>
-        
-        </header>
-        
-    </body>
+
+    </header>
+
+</body>
 </html>
 <script src="payment.js"></script>

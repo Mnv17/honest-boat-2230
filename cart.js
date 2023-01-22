@@ -47,6 +47,8 @@ increase.addEventListener("click",()=>{
     localStorage.setItem("cart",JSON.stringify(cartdata))
   showdata(cartdata)
 
+  sum()
+
   location.reload();
 })
 decrease.addEventListener("click",()=>{
@@ -56,14 +58,17 @@ decrease.addEventListener("click",()=>{
     Quantity.innerText=item.quantity
     localStorage.setItem("cart",JSON.stringify(cartdata))
     showdata(cartdata)
-  
-location.reload();
+
+    sum()}
+    location.reload();
+
 }
+
 })
 // increasedecreasingpartend
 
 
-childdiv2.append(description,description1,ratings,price,increase,Quantity,decrease)
+childdiv2.append(description,ratings,increase,Quantity,decrease)
 let childdiv3=document.createElement("div");
 childdiv3.setAttribute("id","childdiv3")
 let deletebtn=document.createElement("button");
@@ -74,7 +79,7 @@ deletebtn.addEventListener("click",()=>{
     data.splice(index,1)
     localStorage.setItem("cart",JSON.stringify(cartdata))
     showdata(cartdata)
-   location.reload();
+    location.reload();
 })
 // deletepartend
 childdiv3.append(deletebtn)
@@ -85,7 +90,9 @@ maindiv.append(childdiv)
 })
 
 }
-// // sumpart
+
+// sumpart
+
 // function sum(){
 // let total=document.getElementById("subtotal")
 // let estimated1=document.getElementById("estimated")
@@ -98,6 +105,9 @@ maindiv.append(childdiv)
 // estimated1.innerText=`${sum+5}$`
 // console.log(sum)}
 // sum()
+
+
+///////////////////// cart js //////////////////////////
 
 // / updated sumpart
 let alertsum=localStorage.getItem("totalsum")
@@ -122,9 +132,13 @@ checkoutbtn.addEventListener("click",()=>{
 })
 
 
+///////////////////// cart js //////////////////////////
 
 
-// **********************************************************
+
+
+//////////////////////////// Search ////////////////////////////
+
 document.addEventListener("click", (evt) => {
     const flyoutEl = document.getElementById("search");
     let targetEl = evt.target; // clicked element      

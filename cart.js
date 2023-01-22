@@ -32,6 +32,8 @@ decrease.innerHTML="-";
 let ratings=document.createElement("img");
 ratings.setAttribute("src","https://static.thenounproject.com/png/766721-200.png")
 ratings.setAttribute("id","ratings")
+let price=document.createElement("p");
+price.innerHTML=`${item.price}$`
 // decreasing and increasing part
 let i=Quantity.innerText;
 increase.addEventListener("click",()=>{

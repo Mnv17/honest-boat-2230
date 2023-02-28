@@ -54,7 +54,7 @@ ratings.setAttribute("id","ratings")
 let price=document.createElement("p");
 price.innerText=`${item.price}$`
 
-childdiv2.append(description,description1,ratings,price)
+childdiv2.append(description,ratings,price)
 let childdiv3=document.createElement("div");
 childdiv3.setAttribute("id","childdiv3")
 let deletebtn=document.createElement("button");

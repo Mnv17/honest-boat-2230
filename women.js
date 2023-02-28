@@ -1,6 +1,6 @@
 let div=document.getElementById("maindiv")
 let obj={};
-fetch("./women.json")
+fetch("https://cute-red-fossa-slip.cyclic.app/womandatafootlocker")
 .then(res=>res.json())
 .then(data=>{
 obj=data;

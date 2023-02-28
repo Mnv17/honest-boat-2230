@@ -47,7 +47,7 @@ increase.addEventListener("click",()=>{
     localStorage.setItem("cart",JSON.stringify(cartdata))
   showdata(cartdata)
   sum()
-  location.reload();
+ 
 })
 decrease.addEventListener("click",()=>{
     if(item.quantity>1){
@@ -57,7 +57,7 @@ decrease.addEventListener("click",()=>{
     localStorage.setItem("cart",JSON.stringify(cartdata))
     showdata(cartdata)
     sum()}
-    location.reload();
+   
 })
 // increasedecreasingpartend
 
@@ -73,7 +73,7 @@ deletebtn.addEventListener("click",()=>{
     data.splice(index,1)
     localStorage.setItem("cart",JSON.stringify(cartdata))
     showdata(cartdata)
-    location.reload();
+  sum()
 })
 // deletepartend
 childdiv3.append(deletebtn)
@@ -85,41 +85,28 @@ maindiv.append(childdiv)
 
 }
 // sumpart
-// function sum(){
-// let total=document.getElementById("subtotal")
-// let estimated1=document.getElementById("estimated")
-// let sum=0;
-// for(let i=0;i<cartdata.length;i++){
-//  sum=sum+(cartdata[i].quantity*cartdata[i].price)
- 
-// }
-// total.innerText=sum;
-// estimated1.innerText=`${sum+5}$`
-// console.log(sum)}
-// sum()
-
-///////////////////// cart js //////////////////////////
-
-// / updated sumpart
-let alertsum=localStorage.getItem("totalsum")
-
-let totalsum=0;
+let x=0;
 function sum(){
 let total=document.getElementById("subtotal")
 let estimated1=document.getElementById("estimated")
-
+let sum=0;
 for(let i=0;i<cartdata.length;i++){
- totalsum=totalsum+(cartdata[i].quantity*cartdata[i].price)
-
+ sum=sum+(cartdata[i].quantity*cartdata[i].price)
+ 
 }
-total.innerText=totalsum;
-estimated1.innerText=`${totalsum+5}$`
-console.log(totalsum)
+total.innerText=sum;
+estimated1.innerText=`${sum+5}$`
+ x=sum+5
+ console.log(x)
 }
 sum()
+
+let alertsum=localStorage.getItem("totalsum")
+
 let checkoutbtn=document.getElementById("Checkout");
 checkoutbtn.addEventListener("click",()=>{
-  localStorage.setItem("totalsum",totalsum+5)
+    console.log(x)
+  localStorage.setItem("totalsum",x)
 })
 
 ///////////////////// cart js //////////////////////////

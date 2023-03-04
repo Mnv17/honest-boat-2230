@@ -6,5 +6,5 @@
 .signup page - Keerti Pawar
 .favourites - Sonu Parjapat
 .cart - Sonu Parjapat
-.product pages(Men and Women) - Manav Verma
+.product pages(Men and Women) - Manav Verma,Sonu Parjapat
 .payment - Sonu Parjapat & Manav Verma

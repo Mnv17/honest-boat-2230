@@ -1,11 +1,13 @@
 let div=document.getElementById("maindiv")
 let obj={};
-fetch("https://cute-red-fossa-slip.cyclic.app/footlockermendata")
+fetch("https://json-work.onrender.com/mens")
 .then(res=>res.json())
 .then(data=>{
+  console.log("1 sec.", data )
 obj=data;
 afterPromise();
 });
+
 // navbarcode
 
    // navbarend
